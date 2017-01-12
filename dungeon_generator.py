@@ -53,9 +53,12 @@ class dungeon_generator:
 
   def read_components(self):
     importer = fbx.FbxImporter.Create(self.sdk_manager, "")    
-    result = importer.Initialize("scenes/components.fbx", -1, self.io_settings)
+
+    result = importer.Initialize("scenes/components_with_cones.fbx", -1, self.io_settings)
     if not result:
       raise BaseException("could not find components file")
+    
+    #scene creation
     self.components = fbx.FbxScene.Create(self.sdk_manager, "")
     result = importer.Import(self.components)
     importer.Destroy()
@@ -78,6 +81,7 @@ class dungeon_generator:
         connectors = [node.GetChild(i) for i in range(node.GetChildCount())]
         tile_name = node.GetName()
         print("%s has %d children" % (tile_name, node.GetChildCount()))
+        #for each connector
         for c in connectors:
           conn_name = c.GetName();
           # use a regular expression to match the connector name
@@ -137,7 +141,7 @@ class dungeon_generator:
     dest_node.LclTranslation.Set(fbx.FbxDouble3(pos[0], pos[1], pos[2]))
     dest_node.LclRotation.Set(fbx.FbxDouble3(0, 0, angle))
     root = new_scene.GetRootNode()
-    root.AddChild(dest_node)
+    root.AddChild(dest_node)    
 
   def try_tile(self, new_scene, todo, edges, pos, angle, incoming, in_sel):
     in_feature_name, in_tile_name, in_trans, in_rot = incoming[in_sel]
@@ -185,10 +189,41 @@ class dungeon_generator:
     print("pass")
     return True
 
+  def create_new_dungeon(self, new_scene):
+        tile_meshes = self.tile_meshes = {}
+        for name in self.tiles:
+           tile = self.tiles[name]
+           tile_mesh = tile.GetNodeAttribute()
+           tile_meshes[name] = tile_mesh.Clone(fbx.FbxObject.eDeepClone, None)
+           tile_meshes[name].SetName(name)
+
+        edges = {}
+        pos = (0, 0, 0)
+        angle = 0
+
+        stack = [(pos, angle, "flat", False)]
+        dungeon_size = 0
+        random.seed(1)
+
+        while len(stack) and dungeon_size < 400:
+          pos, angle, out_feature_name, in_feature_name = stack.pop()
+
+          print(xy_location(pos))
+
+          for i in range(4):
+            # incoming features are indexed on the feature name
+            incoming = self.incoming[out_feature_name]
+            in_sel = int(random.randrange(len(incoming)))
+
+            if self.try_tile(new_scene, todo, edges, pos, angle, incoming, in_sel):
+              break
+
+          num_tiles += 1
 
   def create_dungeon(self, new_scene, feature_name):
     # clone the tile meshes and name them after their original nodes.
     tile_meshes = self.tile_meshes = {}
+    # add each tile mesh to the mesh array
     for name in self.tiles:
       tile = self.tiles[name]
       tile_mesh = tile.GetNodeAttribute()
