@@ -2,6 +2,7 @@
 import re
 import math
 import random
+import rooms_generator_module
 
 # if (when) this doesn't work, copy 64 bit Python 3.3 fbx.pyd and fbxsip.pyd from the Autodesk FBX SDK
 # into this directory
@@ -54,7 +55,7 @@ class dungeon_generator:
   def read_components(self):
     importer = fbx.FbxImporter.Create(self.sdk_manager, "")    
 
-    result = importer.Initialize("scenes/components_with_cones.fbx", -1, self.io_settings)
+    result = importer.Initialize("scenes/components_v2.fbx", -1, self.io_settings)
     if not result:
       raise BaseException("could not find components file")
     
@@ -67,11 +68,15 @@ class dungeon_generator:
     top_level = [root.GetChild(i) for i in range(root.GetChildCount())]
 
     # child nodes matching this pattern are feature markup
-    feature_pattern = re.compile('(\<|\>)([^.]+)(\..*)?')
+    connectors_regex_pattern = re.compile('(\<|\>)([^.]+)(\..*)?')
 
     incoming = self.incoming = {}
     outgoing = self.outgoing = {}
     tiles = self.tiles = {}
+    room = rooms_generator_module.rooms_generator()
+    room.incoming = {}
+    room.outgoing = {}
+    room.tiles = {}
 
     # find the tiles in the file with at least one child (the connectors)
     for node in top_level:
@@ -80,13 +85,21 @@ class dungeon_generator:
         tiles[node.GetName()] = node;
         connectors = [node.GetChild(i) for i in range(node.GetChildCount())]
         tile_name = node.GetName()
+
+        tile_name_parts = tile_name.split('_')
+        is_room_part = False
+
+        for name in tile_name_parts:
+            if name == "room":
+                is_room_part = True
+
         print("%s has %d children" % (tile_name, node.GetChildCount()))
         #for each connector
         for c in connectors:
           conn_name = c.GetName();
           # use a regular expression to match the connector name
           # and discard any trailing numbers
-          match = feature_pattern.match(conn_name)
+          match = connectors_regex_pattern.match(conn_name)
           if match:
             direction = match.group(1)
             feature_name = match.group(2)
@@ -98,11 +111,17 @@ class dungeon_generator:
             if direction == '>':
               # outgoing tile indexed by tile_name
               idx = tile_name
-              dict = outgoing
+              if is_room_part:
+                dict = room.outgoing
+              else:
+                dict = outgoing
             else:
               # incoming tile indexed by feature name
               idx = feature_name
-              dict = incoming
+              if is_room_part:
+                dict = room.outgoing
+              else:
+                dict = incoming
             if not idx in dict:
               dict[idx] = []
             dict[idx].append(result)
