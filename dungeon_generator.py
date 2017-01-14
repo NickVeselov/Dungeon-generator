@@ -20,11 +20,20 @@ def tovec3(x):
 def add3(x, y):
   return [x[i]+y[i] for i in range(3)]
 
+def abs3(x):
+  return [abs(x[i]) for i in range(3)]
+
 def sub3(x, y):
-  return [x[i]+y[i] for i in range(3)]
+  return [x[i]-y[i] for i in range(3)]
+
+def div3byconst(x,num):
+  return [x[i]/num for i in range(3)]
 
 def neg3(x):
   return [-x[i] for i in range(3)]
+
+def less3(x,y):
+    return ((x[0] <= y[0]) and (x[1]<=y[1]) and (x[2]<=y[2]))
 
 def xy_location(x):
   return (round(x[0]), round(x[1]))
@@ -83,6 +92,8 @@ class dungeon_generator:
     self.room.outgoing = {}
     self.corridor.outgoing = {}
 
+    self.corridor.bb = {}
+
     self.room.tiles = {}
     self.corridor.tiles = {}
 
@@ -118,12 +129,16 @@ class dungeon_generator:
         elif is_corridor_part:
             self.corridor.tiles[tile_name] = node
         elif is_doorframe:
-            self.doorframes.tiles[tile_name] = node
+            self.doorframes.tiles[tile_name] = node        
 
         #read connectors of the tile
         connectors = [node.GetChild(i) for i in range(node.GetChildCount())]        
 
         print("%s has %d children" % (tile_name, node.GetChildCount()))
+
+        max_x = 0
+        max_y = 0
+        max_z = 0
         #for each connector
         for c in connectors:
           conn_name = c.GetName();
@@ -136,6 +151,11 @@ class dungeon_generator:
             print("  %s %s %s" % (tile_name, direction, feature_name))
             trans = c.LclTranslation.Get()
             rot = c.LclRotation.Get()
+
+            max_x = max(max_x, trans[0])
+            max_y = max(max_y, trans[1])
+            max_z = max(max_z, trans[2])
+
             result = (feature_name, tile_name, trans, rot)
 
             if direction == '>':
@@ -164,6 +184,17 @@ class dungeon_generator:
               dict[idx] = []
             dict[idx].append(result)
 
+        if is_corridor_part:
+            max_dim = max(max_x,max_y,max_z)
+
+            if round(max_x) == 0:
+                max_x = max_dim
+            if round(max_y) == 0:
+                max_y = max_dim
+            if round(max_z) == 0:
+                max_z = max_dim
+            self.corridor.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
+            
     # at this point incoming and outgoing index connectors
     # tiles indexes the tiles by name.
     print("Rooms.incoming:", self.room.incoming)
@@ -197,13 +228,27 @@ class dungeon_generator:
 
     exporter.Destroy()
 
-  def make_node(self, new_scene, node_name, pos, angle):
-    dest_node = fbx.FbxNode.Create( new_scene, node_name )
-    dest_node.SetNodeAttribute(self.tile_meshes[node_name])
-    dest_node.LclTranslation.Set(fbx.FbxDouble3(pos[0], pos[1], pos[2]))
-    dest_node.LclRotation.Set(fbx.FbxDouble3(0, 0, angle))
-    root = new_scene.GetRootNode()
-    root.AddChild(dest_node)    
+  def make_node(self, new_scene, node_name, pos, angle, id):
+    #if dungeon_generator.check_for_overlapping(self,new_scene, pos, node_name):
+        dest_node = fbx.FbxNode.Create( new_scene, node_name)
+        dest_node.SetNodeAttribute(self.tile_meshes[node_name])
+        dest_node.LclTranslation.Set(fbx.FbxDouble3(pos[0], pos[1], pos[2]))
+        dest_node.LclRotation.Set(fbx.FbxDouble3(0, 0, angle))
+        root = new_scene.GetRootNode()
+        root.AddChild(dest_node)    
+
+  def check_for_overlapping(self, scene, new_el_loc, node_name):
+    new_el_half_size = div3byconst(self.bb[node_name], 2)
+    root_node = scene.GetRootNode()
+    tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
+    #check overlapping for all nodes
+    for node in tiles:
+        old_el_loc = node.LclTranslation.Get()
+        old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
+        diff = sub3(new_el_loc, old_el_loc)
+        if (less3(abs3(diff), old_el_half_size + new_el_half_size)):
+            return False
+    return True
 
   def try_tile(self, new_scene, todo, edges, pos, angle, incoming, in_sel):
     in_feature_name, in_tile_name, in_trans, in_rot = incoming[in_sel]
