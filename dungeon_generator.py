@@ -95,6 +95,7 @@ class dungeon_generator:
     self.room.outgoing = {}
     self.corridor.outgoing = {}
 
+    self.room.bb = {}
     self.corridor.bb = {}
 
     self.room.tiles = {}
@@ -256,54 +257,11 @@ class dungeon_generator:
             return False
     return True
 
-  def try_tile(self, new_scene, todo, edges, pos, angle, incoming, in_sel):
-    in_feature_name, in_tile_name, in_trans, in_rot = incoming[in_sel]
-
-    # from the feature, set the position and rotation of the new tile
-    new_angle = lim360(angle - in_rot[2])
-    tile_pos = add3(pos, rotateZ(neg3(in_trans), new_angle))
-    tile_name = in_tile_name
-    print(tile_pos, new_angle, tile_name)
-
-    # outgoing features are indexed on the tile name
-    outgoing = self.outgoing[tile_name]
-
-    # check existing edges to see if this tile fits.
-    # although we know that one edge fits, we haven't checked the others.
-    for out_sel in range(len(outgoing)):
-      out_feature_name, out_tile_name, out_trans, out_rot = outgoing[out_sel]
-      new_pos = add3(tile_pos, rotateZ(out_trans, new_angle))
-      if xy_location(new_pos) in edges:
-        edge_pos, edge_angle, edge_feature_name, edge_satisfied = edges[xy_location(new_pos)]
-        print("check", new_pos, edge_pos, out_feature_name, edge_feature_name, edge_satisfied)
-        if edge_satisfied:
-          return False
-        # check the height of the join.
-        # note: we should also check that the incoming matches the outgoing.
-        if abs(edge_pos[2] - new_pos[2]) > 0.01:
-          print("fail")
-          return False
-
-    # add all outgoing edges to the todo list and mark edges
-    # note: if there were multiple outgoing edge choices, we would have to select them.
-    for out_sel in range(len(outgoing)):
-      out_feature_name, out_tile_name, out_trans, out_rot = outgoing[out_sel]
-      new_pos = add3(tile_pos, rotateZ(out_trans, new_angle))
-      if not xy_location(new_pos) in edges:
-        # make an unsatisfied edge
-        edge = (new_pos, lim360(new_angle + out_rot[2]), out_feature_name, None)
-        edges[xy_location(new_pos)] = edge
-        todo.append(edge)
-      else:
-        edge_pos, edge_angle, edge_feature_name, edge_satisfied = edges[xy_location(new_pos)]
-        edges[xy_location(new_pos)] = (edge_pos, edge_angle, edge_feature_name, out_feature_name)
-
-    self.make_node(new_scene, tile_name, tile_pos, new_angle)
-    print("pass")
-    return True
+ 
 
   def create_dungeon(self, new_scene):
-      self.corridor.create_corridor(new_scene)
+      #self.corridor.create_corridor(new_scene)
+      self.room.create_room(new_scene)
 
 
 
@@ -314,36 +272,4 @@ class dungeon_generator:
 
 
 
-    # clone the tile meshes and name them after their original nodes.
-    #tile_meshes = self.tile_meshes = {}
-    ## add each tile mesh to the mesh array
-    #for name in self.tiles:
-    #  tile = self.tiles[name]
-    #  tile_mesh = tile.GetNodeAttribute()
-    #  tile_meshes[name] = tile_mesh.Clone(fbx.FbxObject.eDeepClone, None)
-    #  tile_meshes[name].SetName(name)
-
-    #edges = {}
-    #pos = (0, 0, 0)
-    #angle = 0
-
-    ## create an unsatisfied edge
-    #todo = [(pos, angle, feature_name, False)]
-    #num_tiles = 0
-    #random.seed(1)
-
-    ## this loop processes one edge from the todo list.
-    #while len(todo) and num_tiles < 200:
-    #  pos, angle, out_feature_name, in_feature_name = todo.pop()
-
-    #  print(xy_location(pos))
-
-    #  for i in range(4):
-    #    # incoming features are indexed on the feature name
-    #    incoming = self.room.incoming[out_feature_name]
-    #    in_sel = int(random.randrange(len(incoming)))
-
-    #    if self.try_tile(new_scene, todo, edges, pos, angle, incoming, in_sel):
-    #      break
-
-    #  num_tiles += 1
+    
