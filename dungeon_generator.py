@@ -33,7 +33,10 @@ def neg3(x):
   return [-x[i] for i in range(3)]
 
 def less3(x,y):
-    return ((x[0] <= y[0]) and (x[1]<=y[1]) and (x[2]<=y[2]))
+    return ((x[0] < y[0]) and (x[1]<y[1]) and (x[2]<y[2]))
+
+def round3(x):
+    return [round(x[i]) for i in range(3)]
 
 def xy_location(x):
   return (round(x[0]), round(x[1]))
@@ -152,9 +155,9 @@ class dungeon_generator:
             trans = c.LclTranslation.Get()
             rot = c.LclRotation.Get()
 
-            max_x = max(max_x, trans[0])
-            max_y = max(max_y, trans[1])
-            max_z = max(max_z, trans[2])
+            max_x = max(max_x, abs(trans[0]))
+            max_y = max(max_y, abs(trans[1]))
+            max_z = max(max_z, abs(trans[2]))
 
             result = (feature_name, tile_name, trans, rot)
 
@@ -238,6 +241,8 @@ class dungeon_generator:
         root.AddChild(dest_node)    
 
   def check_for_overlapping(self, scene, new_el_loc, node_name):
+    if node_name.split('_')[2] == 'Stairs':
+        a = 5    
     new_el_half_size = div3byconst(self.bb[node_name], 2)
     root_node = scene.GetRootNode()
     tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
@@ -245,8 +250,9 @@ class dungeon_generator:
     for node in tiles:
         old_el_loc = node.LclTranslation.Get()
         old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
-        diff = sub3(new_el_loc, old_el_loc)
-        if (less3(abs3(diff), old_el_half_size + new_el_half_size)):
+        diff = round3(abs3(sub3(new_el_loc, old_el_loc)))
+        half_size = round3(add3(old_el_half_size, new_el_half_size))
+        if less3(diff, half_size):
             return False
     return True
 
