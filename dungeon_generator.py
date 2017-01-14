@@ -3,6 +3,7 @@ import re
 import math
 import random
 import rooms_generator_module
+import corridor_generator_module
 
 # if (when) this doesn't work, copy 64 bit Python 3.3 fbx.pyd and fbxsip.pyd from the Autodesk FBX SDK
 # into this directory
@@ -55,7 +56,7 @@ class dungeon_generator:
   def read_components(self):
     importer = fbx.FbxImporter.Create(self.sdk_manager, "")    
 
-    result = importer.Initialize("scenes/components_v2.fbx", -1, self.io_settings)
+    result = importer.Initialize("scenes/components.fbx", -1, self.io_settings)
     if not result:
       raise BaseException("could not find components file")
     
@@ -73,25 +74,54 @@ class dungeon_generator:
     incoming = self.incoming = {}
     outgoing = self.outgoing = {}
     tiles = self.tiles = {}
-    room = rooms_generator_module.rooms_generator()
-    room.incoming = {}
-    room.outgoing = {}
-    room.tiles = {}
+    self.room = rooms_generator_module.rooms_generator()
+    self.corridor = corridor_generator_module.corridor_generator()
+
+    self.room.incoming = {}
+    self.corridor.incoming = {}
+
+    self.room.outgoing = {}
+    self.corridor.outgoing = {}
+
+    self.room.tiles = {}
+    self.corridor.tiles = {}
+
+    self.doorframes = {}
+    self.unused = {}
 
     # find the tiles in the file with at least one child (the connectors)
     for node in top_level:
       if node.GetChildCount():
-        # for each tile, check the names of the connectors
-        tiles[node.GetName()] = node;
-        connectors = [node.GetChild(i) for i in range(node.GetChildCount())]
+
+        #get the name of the tile
         tile_name = node.GetName()
+
+        #identify tile type
 
         tile_name_parts = tile_name.split('_')
         is_room_part = False
+        is_corridor_part = False
+        is_doorframe = False
 
+        
         for name in tile_name_parts:
             if name == "room":
                 is_room_part = True
+            if name == "corridor":
+                is_corridor_part = True
+            if name == "doorframe":
+                is_doorframe = True
+
+        #add tile to the appropriate tile dictionary
+        if is_room_part:
+            self.room.tiles[tile_name] = node
+        elif is_corridor_part:
+            self.corridor.tiles[tile_name] = node
+        elif is_doorframe:
+            self.doorframes.tiles[tile_name] = node
+
+        #read connectors of the tile
+        connectors = [node.GetChild(i) for i in range(node.GetChildCount())]        
 
         print("%s has %d children" % (tile_name, node.GetChildCount()))
         #for each connector
@@ -112,24 +142,37 @@ class dungeon_generator:
               # outgoing tile indexed by tile_name
               idx = tile_name
               if is_room_part:
-                dict = room.outgoing
+                dict = self.room.outgoing
+              elif is_corridor_part:
+                dict = self.corridor.outgoing
+              elif is_doorframe:
+                dict = self.doorframes
               else:
-                dict = outgoing
+                dict = self.unused
             else:
               # incoming tile indexed by feature name
               idx = feature_name
               if is_room_part:
-                dict = room.outgoing
+                dict = self.room.incoming
+              elif is_corridor_part:
+                dict = self.corridor.incoming
+              elif is_doorframe:
+                dict = self.doorframes
               else:
-                dict = incoming
+                dict = self.unused
             if not idx in dict:
               dict[idx] = []
             dict[idx].append(result)
 
     # at this point incoming and outgoing index connectors
     # tiles indexes the tiles by name.
-    print("self.incoming:", self.incoming)
-    print("self.outgoing:", self.outgoing)
+    print("Rooms.incoming:", self.room.incoming)
+    print("Rooms.outgoing:", self.room.outgoing)
+
+    print("Corridors.incoming:", self.corridor.incoming)
+    print("Corridors.outgoing:", self.corridor.outgoing)
+
+    print("Doorframes:", self.doorframes)
 
   def get_format(self, name):
     reg = self.sdk_manager.GetIOPluginRegistry()
@@ -145,7 +188,7 @@ class dungeon_generator:
     format = self.get_format("FBX ascii")
 
     new_scene = fbx.FbxScene.Create(self.sdk_manager, "result");
-    self.create_dungeon(new_scene, "flat")
+    self.create_dungeon(new_scene)
 
     exporter = fbx.FbxExporter.Create(self.sdk_manager, "")
     
@@ -208,68 +251,48 @@ class dungeon_generator:
     print("pass")
     return True
 
-  def create_new_dungeon(self, new_scene):
-        tile_meshes = self.tile_meshes = {}
-        for name in self.tiles:
-           tile = self.tiles[name]
-           tile_mesh = tile.GetNodeAttribute()
-           tile_meshes[name] = tile_mesh.Clone(fbx.FbxObject.eDeepClone, None)
-           tile_meshes[name].SetName(name)
+  def create_dungeon(self, new_scene):
+      self.corridor.create_corridor(new_scene)
 
-        edges = {}
-        pos = (0, 0, 0)
-        angle = 0
 
-        stack = [(pos, angle, "flat", False)]
-        dungeon_size = 0
-        random.seed(1)
 
-        while len(stack) and dungeon_size < 400:
-          pos, angle, out_feature_name, in_feature_name = stack.pop()
+      ### Below this comment is old Andy's code
+      ### For Jack -> Instead, here should be combination of module creation (corridors & rooms)
+      ### For Luke -> You can test your code here, by changing line 255 to the call of your function
 
-          print(xy_location(pos))
 
-          for i in range(4):
-            # incoming features are indexed on the feature name
-            incoming = self.incoming[out_feature_name]
-            in_sel = int(random.randrange(len(incoming)))
 
-            if self.try_tile(new_scene, todo, edges, pos, angle, incoming, in_sel):
-              break
 
-          num_tiles += 1
-
-  def create_dungeon(self, new_scene, feature_name):
     # clone the tile meshes and name them after their original nodes.
-    tile_meshes = self.tile_meshes = {}
-    # add each tile mesh to the mesh array
-    for name in self.tiles:
-      tile = self.tiles[name]
-      tile_mesh = tile.GetNodeAttribute()
-      tile_meshes[name] = tile_mesh.Clone(fbx.FbxObject.eDeepClone, None)
-      tile_meshes[name].SetName(name)
+    #tile_meshes = self.tile_meshes = {}
+    ## add each tile mesh to the mesh array
+    #for name in self.tiles:
+    #  tile = self.tiles[name]
+    #  tile_mesh = tile.GetNodeAttribute()
+    #  tile_meshes[name] = tile_mesh.Clone(fbx.FbxObject.eDeepClone, None)
+    #  tile_meshes[name].SetName(name)
 
-    edges = {}
-    pos = (0, 0, 0)
-    angle = 0
+    #edges = {}
+    #pos = (0, 0, 0)
+    #angle = 0
 
-    # create an unsatisfied edge
-    todo = [(pos, angle, feature_name, False)]
-    num_tiles = 0
-    random.seed(1)
+    ## create an unsatisfied edge
+    #todo = [(pos, angle, feature_name, False)]
+    #num_tiles = 0
+    #random.seed(1)
 
-    # this loop processes one edge from the todo list.
-    while len(todo) and num_tiles < 200:
-      pos, angle, out_feature_name, in_feature_name = todo.pop()
+    ## this loop processes one edge from the todo list.
+    #while len(todo) and num_tiles < 200:
+    #  pos, angle, out_feature_name, in_feature_name = todo.pop()
 
-      print(xy_location(pos))
+    #  print(xy_location(pos))
 
-      for i in range(4):
-        # incoming features are indexed on the feature name
-        incoming = self.incoming[out_feature_name]
-        in_sel = int(random.randrange(len(incoming)))
+    #  for i in range(4):
+    #    # incoming features are indexed on the feature name
+    #    incoming = self.room.incoming[out_feature_name]
+    #    in_sel = int(random.randrange(len(incoming)))
 
-        if self.try_tile(new_scene, todo, edges, pos, angle, incoming, in_sel):
-          break
+    #    if self.try_tile(new_scene, todo, edges, pos, angle, incoming, in_sel):
+    #      break
 
-      num_tiles += 1
+    #  num_tiles += 1
