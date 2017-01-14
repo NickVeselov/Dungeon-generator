@@ -198,6 +198,17 @@ class dungeon_generator:
             if round(max_z) == 0:
                 max_z = max_dim
             self.corridor.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
+        
+        if is_room_part:
+            max_dim = max(max_x,max_y,max_z)
+
+            if round(max_x) == 0:
+                max_x = max_dim
+            if round(max_y) == 0:
+                max_y = max_dim
+            if round(max_z) == 0:
+                max_z = max_dim
+            self.room.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
             
     # at this point incoming and outgoing index connectors
     # tiles indexes the tiles by name.
