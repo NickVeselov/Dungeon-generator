@@ -226,7 +226,7 @@ class dungeon_generator:
 
     exporter = fbx.FbxExporter.Create(self.sdk_manager, "")
     
-    if exporter.Initialize("scenes/result.fbx", format, self.io_settings):
+    if exporter.Initialize("scenes/result2.fbx", format, self.io_settings):
       exporter.Export(new_scene)
 
     exporter.Destroy()

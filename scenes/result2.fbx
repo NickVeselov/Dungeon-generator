@@ -12,9 +12,9 @@ FBXHeaderExtension:  {
 		Month: 1
 		Day: 14
 		Hour: 17
-		Minute: 6
-		Second: 9
-		Millisecond: 904
+		Minute: 7
+		Second: 30
+		Millisecond: 415
 	}
 	Creator: "FBX SDK/FBX Plugins version 2015.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -30,8 +30,8 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "scenes\result.fbx"
-			P: "SrcDocumentUrl", "KString", "Url", "", "scenes\result.fbx"
+			P: "DocumentUrl", "KString", "Url", "", "scenes\result2.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "scenes\result2.fbx"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", ""
 			P: "Original|ApplicationName", "KString", "", "", ""
@@ -77,7 +77,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 67870064, "result", "Scene" {
+	Document: 66035056, "result", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -198,7 +198,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 69769416, "Geometry::corridor_4way_wide_01", "Mesh" {
+	Geometry: 67934064, "Geometry::corridor_4way_wide_01", "Mesh" {
 		Vertices: *189 {
 			a: 3,-3,0,1,-3,5.5,3,-3,4,4,-3,0,4,-1,5.5,4,-3,4,1,-4,5.5,3,-4,4,1,-3,6,3,-1,5.5,3,-1,6,3,-4,0,1,3,5.5,3,3,4,4,1,5.5,4,3,4,1,4,5.5,3,4,4,1,3,6,3,1,5.5,3,1,6,3,0,0,3,3,0,4,0,0,4,3,0,3,4,0,3,0,6,3,0,5.5,4,0,5.5,-3,-3,0,-1,-3,5.5,-3,-3,4,-4,-3,0,-4,-1,5.5,-4,-3,4,-1,-4,5.5,-3,-4,4,-1,-3,6,-3,-1,5.5,-3,-1,6,0,-3,0,-3,-4,0,0,-4,0,-1,3,5.5,-3,3,4,-4,3,0,-4,1,5.5,-4,3,4,-1,4,5.5,-3,4,4,-1,3,6,-3,1,5.5,-3,1,6,-3,0,0,-3,3,0,-4,0,0,0,3,0,0,0,0,-3,4,0,0,4,0,-3,0,6,-3,0,5.5,-4,0,5.5
 		} 
@@ -281,7 +281,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 69769072, "Geometry::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Geometry: 67933720, "Geometry::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Vertices: *192 {
 			a: 0.994530200958252,3.49999952316284,5.5,2.99452996253967,3.49999952316284,4,2.99453139305115,3.49999952316284,0,-3.00546956062317,3.50000143051147,4,-3.00546860694885,3.49999952316284,0,-0.905469536781311,3.49999952316284,5.5,-3.00546956062317,4.00000143051147,4,-3.00546860694885,3.99999952316284,0,-0.905469536781311,3.99999952316284,5.5,2.99453139305115,3.99999952316284,0,2.99452996253967,3.99999952316284,4,0.994530200958252,3.99999952316284,5.5,3.59999823570251,-11.5000019073486,-4,3.59999871253967,3.50000143051147,0,-3.60000228881836,-11.5000019073486,-4,3.60000205039978,-11.5000019073486,0,-3.60000038146973,-11.5,0,-3.60000038146973,-11.5,-2,3.59999871253967,-4.00000190734863,-2,-3.60000133514404,-4.00000190734863,-2,3.59999871253967,1.99999809265137,0,-3.60000085830688,1.99999809265137,0,-3.60000228881836,-10.0000019073486,-4,3.60000205039978,-11.5000019073486,-2,3.59999823570251,-10.0000019073486,-4,-3.60000038146973,-10,0,3.60000205039978,-10.0000019073486,0,-3.60000038146973,-10,-2,3.60000205039978,-10.0000019073486,-2,-3.60000085830688,3.50000143051147,0,-3.60000038146973,-4.00000095367432,0,3.60000061988831,-4.00000190734863,0,0.994530200958252,-11.5,1.5,2.99452996253967,-11.5000009536743,0,-0.905469536781311,-11.5,1.5,-3.00546860694885,-11.5,-4,-0.905469536781311,-12,1.5,-3.00546860694885,-12,-4,-3.00546956062317,-11.9999990463257,0,2.99453139305115,-12,-4,2.99452996253967,-12.0000009536743,0,0.994530200958252,-12,1.5,3.60000109672546,3.49999952316284,4,-3.60000133514404,3.50000333786011,4,-3.00546956062317,-11.4999990463257,0,2.99453139305115,-11.5,-4,3.60000205039978,-10.0000019073486,0,-3.60000038146973,-10,0,0.994530200958252,-10,1.5,2.99452996253967,-10.0000009536743,0,-0.905469536781311,-10,1.5,-3.00546956062317,-9.99999904632568,0,0.994530200958252,2,5.5,2.99452996253967,1.99999904632568,4,-3.00546956062317,2.00000095367432,4,-0.905469536781311,2,5.5,3.60000109672546,2,4,-3.60000133514404,2.00000381469727,4,-3.60000085830688,-3.99999809265137,2,-3.00546956062317,-3.99999904632568,2,
 -0.905469536781311,-4,3.5,0.994530200958252,-4,3.5,2.99452996253967,-4.00000095367432,2,3.60000157356262,-4.00000095367432,2
@@ -367,7 +367,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 69767008, "Geometry::corridor_1way_wide_01", "Mesh" {
+	Geometry: 67934408, "Geometry::corridor_1way_wide_01", "Mesh" {
 		Vertices: *225 {
 			a: 3.60000014305115,-3.50000047683716,0,-1.99999988079071,-3.5,0,2.00000023841858,-3.5,0,-3.60000276565552,-3.52499961853027,0,1.74845553146952e-007,-3.5,0,3.59999895095825,-3.50000095367432,4,1.99999868869781,-3.50000047683716,6,-1.90000104904175,-3.49999952316284,6,-3.60000228881836,-3.49999952316284,0,-3.60000324249268,-3.49999904632568,4,3.59999942779541,-3.50000047683716,2.79999995231628,-3.60000276565552,-3.49999904632568,2.79999995231628,-3.60000276565552,-0.0125000476837158,0,-1.99999988079071,-4,0,2.00000023841858,-4,0,1.74845553146952e-007,-4,0,0.999998688697815,-3.50000047683716,5.5,2.99999856948853,-3.50000095367432,4,2.99999976158142,-3.50000047683716,0,-0.900001049041748,-3.49999952316284,5.5,-3,-3.49999952316284,0,-3.00000095367432,-3.49999904632568,4,-3.00000047683716,-3.49999904632568,2.79999995231628,-0.900001049041748,-3.99999952316284,5.5,-3,-3.99999952316284,0,-3.00000095367432,-3.99999904632568,4,-3.00000047683716,-3.99999904632568,2.79999995231628,2.99999904632568,-3.50000047683716,2.79999995231628,2.99999976158142,-4.00000047683716,0,2.99999856948853,-4.00000095367432,4,0.999998688697815,-4.00000047683716,5.5,2.99999904632568,-4.00000047683716,2.79999995231628,3.60000014305115,3.50000047683716,0,-1.99999988079071,3.5,0,2.00000023841858,3.5,0,-3.60000276565552,3.52499961853027,0,1.74845553146952e-007,3.5,0,3.59999895095825,3.50000095367432,4,1.99999868869781,3.50000047683716,6,-1.90000104904175,3.49999952316284,6,-3.60000228881836,3.49999952316284,0,-3.60000324249268,3.49999904632568,4,3.59999942779541,3.50000047683716,2.79999995231628,-3.60000276565552,3.49999904632568,2.79999995231628,-3.60000276565552,0.0125000476837158,0,-1.99999988079071,4,0,2.00000023841858,4,0,2,0,0,1.74845553146952e-007,4,0,3.60000014305115,0,4,-2,0,0,3.59999990463257,0,0,0.999998688697815,3.50000047683716,5.5,2.99999856948853,3.50000095367432,4,0,0,0,2.99999976158142,3.50000047683716,0,-0.900001049041748,3.49999952316284,5.5,-3,3.49999952316284,0,-3.00000095367432,3.49999904632568,4,-3.00000047683716,3.49999904632568,2.79999995231628,
 -0.900001049041748,3.99999952316284,5.5,-3,3.99999952316284,0,-3.00000095367432,3.99999904632568,4,-3.00000047683716,3.99999904632568,2.79999995231628,2.99999904632568,3.50000047683716,2.79999995231628,2.99999976158142,4.00000047683716,0,2.99999856948853,4.00000095367432,4,0.999998688697815,4.00000047683716,5.5,2.99999904632568,4.00000047683716,2.79999995231628,1.99999976158142,0,6,-1.90000033378601,0,6,-3.60000228881836,0,2.79999995231628,3.60000014305115,0,2.79999995231628,-3.60000276565552,0,4,-3.60000228881836,0,0
@@ -454,7 +454,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 69768384, "Geometry::corridor_3way_wide_01", "Mesh" {
+	Geometry: 67932344, "Geometry::corridor_3way_wide_01", "Mesh" {
 		Vertices: *216 {
 			a: 2.97560977935791,-3,0,-3.02439022064209,-4,4,-3.02439022064209,-4,2.79999995231628,-3.60000133514404,-3,4,-3.60000133514404,-3,2.79999995231628,-3.60000133514404,-3,0,-1.02439022064209,-4,5.5,-2.02439022064209,-3,6,0.975609719753265,-3,5.5,2.97560977935791,-3,4,3.97560977935791,-1,5.5,3.97560977935791,-3,4,0.975609719753265,-4,5.5,2.97560977935791,-4,4,-1.02439022064209,-3,6,0.975609719753265,-3,6,-3.02439022064209,-3,4,-3.02439022064209,-3,2.79999995231628,-3.02439022064209,-3,0,-1.02439022064209,-3,5.5,-3.02439022064209,-4,0,2.97560977935791,-1,5.5,2.97560977935791,-1,6,3.97560977935791,-3,0,-0.0243902429938316,-3,0,2.97560977935791,-4,0,-0.0243902429938316,-4,0,2.97560977935791,3,0,-3.02439022064209,4,4,-2.02439022064209,0,6,-3.60000133514404,0,2.79999995231628,-3.60000133514404,0,4,-3.60000133514404,0,0,-3.02439022064209,4,2.79999995231628,-3.60000133514404,3,4,-3.60000133514404,3,2.79999995231628,-3.60000133514404,3,0,-1.02439022064209,4,5.5,-2.02439022064209,3,6,0.975609719753265,3,5.5,2.97560977935791,3,4,3.97560977935791,3,0,3.97560977935791,1,5.5,3.97560977935791,3,4,0.975609719753265,4,5.5,2.97560977935791,4,4,-1.02439022064209,3,6,0.975609719753265,3,6,-3.02439022064209,3,4,-3.02439022064209,3,2.79999995231628,-3.02439022064209,3,0,-1.02439022064209,3,5.5,2.97560977935791,1,5.5,2.97560977935791,1,6,-3.02439022064209,0,0,2.97560977935791,0,0,3.97560977935791,0,0,-0.0243902429938316,3,0,-0.0243902429938316,0,0,-3.02439022064209,4,0,2.97560977935791,4,0,-0.0243902429938316,4,0,2.97560977935791,0,6,2.97560977935791,0,5.5,3.97560977935791,0,5.5,-0.0243902429938316,-3,5.5,-0.0243902429938316,-3,6,-0.0243902429938316,-4,5.5,-0.0243902429938316,3,5.5,-0.0243902429938316,3,6,-0.0243902429938316,4,5.5,-0.0243902429938316,0,6
 		} 
@@ -538,7 +538,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 69768040, "Geometry::corridor_2way_wide_01", "Mesh" {
+	Geometry: 67933376, "Geometry::corridor_2way_wide_01", "Mesh" {
 		Vertices: *159 {
 			a: 0,3.59999942779541,0,3,-3,0,-3,-4,4,0,2,6,0,3.59999942779541,4,-2,0,6,-3.60000228881836,0,2.79999995231628,0,3.59999942779541,2.79999995231628,-3.60000228881836,0,4,-3.60000228881836,0,0,3,3.59999942779541,2.79999995231628,3,2,6,-3,-4,2.79999995231628,3,3.59999942779541,0,3,3.59999942779541,4,-3.60000228881836,-3,4,-3.60000228881836,-3,2.79999995231628,-3.60000228881836,-3,0,-1,-4,5.5,-2,-3,6,1,-3,5.5,3,-3,4,4,-1,5.5,4,-3,4,1,-4,5.5,3,-4,4,-1,-3,6,1,-3,6,-3,-3,4,-3,-3,2.79999995231628,-3,-3,0,-1,-3,5.5,4,3,2.79999995231628,4,3,4,4,3,0,3,3,2.79999995231628,3,1,5.5,3,3,4,3,3,0,-3,-4,0,3,-1,5.5,3,-1,6,3,1,6,4,1,5.5,-3,0,0,3,0,0,4,0,0,4,-3,0,0,3,0,0,-3,0,0,0,0,3,-4,0,0,-4,0
 		} 
@@ -620,7 +620,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 68187008, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 66352000, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -630,7 +630,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68188424, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 66353416, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -641,7 +641,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68189840, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 66354832, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -652,7 +652,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68191256, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 66356248, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -663,7 +663,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68192672, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 66357664, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -674,7 +674,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68194088, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 66359080, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -685,7 +685,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70086144, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68251240, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -696,7 +696,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70087560, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68252656, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -707,7 +707,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70088976, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68254072, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -718,7 +718,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70090392, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68255488, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -729,7 +729,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70091808, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68256904, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -740,7 +740,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70093224, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68258320, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -751,7 +751,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70094640, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68259736, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -762,7 +762,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70096056, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68261152, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -773,7 +773,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70097472, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68262568, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -784,7 +784,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70098888, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68263984, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -795,7 +795,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70100304, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68265400, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -806,7 +806,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70101720, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68266816, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -817,7 +817,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70103136, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68268232, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -828,7 +828,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70104552, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68269648, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -839,7 +839,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70105968, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68271064, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -850,7 +850,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70107384, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68272480, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -861,7 +861,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70108800, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68273896, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -872,7 +872,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70110216, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68275312, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -883,7 +883,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70111632, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68276728, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -894,7 +894,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70113048, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68278144, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -905,7 +905,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70114464, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68279560, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -916,7 +916,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70115880, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68280976, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -927,7 +927,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70117296, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68282392, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -938,7 +938,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70151680, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68316776, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -949,7 +949,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70153096, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68318192, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -960,7 +960,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70154512, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68319608, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -971,7 +971,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70155928, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68321024, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -982,7 +982,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70157344, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68322440, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -993,7 +993,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70158760, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68323856, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1004,7 +1004,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70160176, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68325272, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1015,7 +1015,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70161592, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68326688, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1026,7 +1026,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70163008, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68328104, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1037,7 +1037,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70164424, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68329520, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1048,7 +1048,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70165840, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68330936, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1059,7 +1059,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70167256, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68332352, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1070,7 +1070,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70168672, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68333768, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1081,7 +1081,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70170088, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68335184, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1092,7 +1092,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70171504, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68336600, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1103,7 +1103,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70172920, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68338016, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1114,7 +1114,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70174336, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68339432, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1125,7 +1125,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70175752, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68340848, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1136,7 +1136,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70177168, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68342264, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1147,7 +1147,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70178584, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68343680, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1158,7 +1158,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70180000, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68345096, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1169,7 +1169,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70181416, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68346512, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1180,7 +1180,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70182832, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68347928, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1191,7 +1191,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70274560, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68439656, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1202,7 +1202,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70275976, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68441072, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1213,7 +1213,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70277392, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68442488, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1224,7 +1224,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70278808, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68443904, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1235,7 +1235,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70280224, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68445320, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1246,7 +1246,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70281640, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68446736, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1257,7 +1257,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70283056, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68448152, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1268,7 +1268,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70284472, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68449568, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1279,7 +1279,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70285888, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68450984, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1290,7 +1290,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70287304, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68452400, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1301,7 +1301,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70288720, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68453816, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1312,7 +1312,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70290136, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68455232, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1323,7 +1323,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70291552, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68456648, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1333,7 +1333,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70292968, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68458064, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1343,7 +1343,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70294384, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68459480, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1354,7 +1354,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70295800, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68460896, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1365,7 +1365,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70297216, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68462312, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1376,7 +1376,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70298632, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68463728, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1387,7 +1387,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70300048, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68465144, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1398,7 +1398,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70301464, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68466560, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1409,7 +1409,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70302880, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68467976, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1420,7 +1420,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70304296, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68469392, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1431,7 +1431,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70305712, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68470808, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1442,7 +1442,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70127104, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68292200, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1453,7 +1453,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70128520, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68293616, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1464,7 +1464,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70129936, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68295032, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1475,7 +1475,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70131352, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68296448, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1486,7 +1486,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70132768, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68297864, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1497,7 +1497,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70134184, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68299280, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1508,7 +1508,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70135600, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68300696, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1519,7 +1519,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70137016, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68302112, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1530,7 +1530,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70138432, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68303528, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1540,7 +1540,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70139848, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68304944, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1551,7 +1551,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70141264, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68306360, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1561,7 +1561,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70368776, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68533872, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1572,7 +1572,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70370192, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68535288, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1583,7 +1583,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70371608, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68536704, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1593,7 +1593,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70373024, "Model::corridor_3way_wide_01", "Mesh" {
+	Model: 68538120, "Model::corridor_3way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1603,7 +1603,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70374440, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68539536, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1613,7 +1613,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70375856, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68540952, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1623,7 +1623,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70377272, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
+	Model: 68542368, "Model::corridor_1way_Stairs_Wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1634,7 +1634,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70378688, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68543784, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1645,7 +1645,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70380104, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68545200, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1656,7 +1656,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70381520, "Model::corridor_1way_wide_01", "Mesh" {
+	Model: 68546616, "Model::corridor_1way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1667,7 +1667,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70382936, "Model::corridor_4way_wide_01", "Mesh" {
+	Model: 68548032, "Model::corridor_4way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1678,7 +1678,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 70384352, "Model::corridor_2way_wide_01", "Mesh" {
+	Model: 68549448, "Model::corridor_2way_wide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1697,592 +1697,592 @@ Objects:  {
 Connections:  {
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",68187008,0
+	C: "OO",66352000,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",68188424,0
+	C: "OO",66353416,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",68189840,0
+	C: "OO",66354832,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",68191256,0
+	C: "OO",66356248,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",68192672,0
+	C: "OO",66357664,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",68194088,0
+	C: "OO",66359080,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70086144,0
+	C: "OO",68251240,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70087560,0
+	C: "OO",68252656,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70088976,0
+	C: "OO",68254072,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70090392,0
+	C: "OO",68255488,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70091808,0
+	C: "OO",68256904,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70093224,0
+	C: "OO",68258320,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70094640,0
+	C: "OO",68259736,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70096056,0
+	C: "OO",68261152,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70097472,0
+	C: "OO",68262568,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70098888,0
+	C: "OO",68263984,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70100304,0
+	C: "OO",68265400,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70101720,0
+	C: "OO",68266816,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70103136,0
+	C: "OO",68268232,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70104552,0
+	C: "OO",68269648,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70105968,0
+	C: "OO",68271064,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70107384,0
+	C: "OO",68272480,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70108800,0
+	C: "OO",68273896,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70110216,0
+	C: "OO",68275312,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70111632,0
+	C: "OO",68276728,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70113048,0
+	C: "OO",68278144,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70114464,0
+	C: "OO",68279560,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70115880,0
+	C: "OO",68280976,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70117296,0
+	C: "OO",68282392,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70151680,0
+	C: "OO",68316776,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70153096,0
+	C: "OO",68318192,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70154512,0
+	C: "OO",68319608,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70155928,0
+	C: "OO",68321024,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70157344,0
+	C: "OO",68322440,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70158760,0
+	C: "OO",68323856,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70160176,0
+	C: "OO",68325272,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70161592,0
+	C: "OO",68326688,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70163008,0
+	C: "OO",68328104,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70164424,0
+	C: "OO",68329520,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70165840,0
+	C: "OO",68330936,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70167256,0
+	C: "OO",68332352,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70168672,0
+	C: "OO",68333768,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70170088,0
+	C: "OO",68335184,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70171504,0
+	C: "OO",68336600,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70172920,0
+	C: "OO",68338016,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70174336,0
+	C: "OO",68339432,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70175752,0
+	C: "OO",68340848,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70177168,0
+	C: "OO",68342264,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70178584,0
+	C: "OO",68343680,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70180000,0
+	C: "OO",68345096,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70181416,0
+	C: "OO",68346512,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70182832,0
+	C: "OO",68347928,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70274560,0
+	C: "OO",68439656,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70275976,0
+	C: "OO",68441072,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70277392,0
+	C: "OO",68442488,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70278808,0
+	C: "OO",68443904,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70280224,0
+	C: "OO",68445320,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70281640,0
+	C: "OO",68446736,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70283056,0
+	C: "OO",68448152,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70284472,0
+	C: "OO",68449568,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70285888,0
+	C: "OO",68450984,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70287304,0
+	C: "OO",68452400,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70288720,0
+	C: "OO",68453816,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70290136,0
+	C: "OO",68455232,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70291552,0
+	C: "OO",68456648,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70292968,0
+	C: "OO",68458064,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70294384,0
+	C: "OO",68459480,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70295800,0
+	C: "OO",68460896,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70297216,0
+	C: "OO",68462312,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70298632,0
+	C: "OO",68463728,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70300048,0
+	C: "OO",68465144,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70301464,0
+	C: "OO",68466560,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70302880,0
+	C: "OO",68467976,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70304296,0
+	C: "OO",68469392,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70305712,0
+	C: "OO",68470808,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70127104,0
+	C: "OO",68292200,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70128520,0
+	C: "OO",68293616,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70129936,0
+	C: "OO",68295032,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70131352,0
+	C: "OO",68296448,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70132768,0
+	C: "OO",68297864,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70134184,0
+	C: "OO",68299280,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70135600,0
+	C: "OO",68300696,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70137016,0
+	C: "OO",68302112,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70138432,0
+	C: "OO",68303528,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70139848,0
+	C: "OO",68304944,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70141264,0
+	C: "OO",68306360,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70368776,0
+	C: "OO",68533872,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70370192,0
+	C: "OO",68535288,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70371608,0
+	C: "OO",68536704,0
 	
 	;Model::corridor_3way_wide_01, Model::RootNode
-	C: "OO",70373024,0
+	C: "OO",68538120,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70374440,0
+	C: "OO",68539536,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70375856,0
+	C: "OO",68540952,0
 	
 	;Model::corridor_1way_Stairs_Wide_01, Model::RootNode
-	C: "OO",70377272,0
+	C: "OO",68542368,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70378688,0
+	C: "OO",68543784,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70380104,0
+	C: "OO",68545200,0
 	
 	;Model::corridor_1way_wide_01, Model::RootNode
-	C: "OO",70381520,0
+	C: "OO",68546616,0
 	
 	;Model::corridor_4way_wide_01, Model::RootNode
-	C: "OO",70382936,0
+	C: "OO",68548032,0
 	
 	;Model::corridor_2way_wide_01, Model::RootNode
-	C: "OO",70384352,0
+	C: "OO",68549448,0
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,68187008
+	C: "OO",67934064,66352000
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,68188424
+	C: "OO",67933720,66353416
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,68189840
+	C: "OO",67934408,66354832
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,68191256
+	C: "OO",67934408,66356248
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,68192672
+	C: "OO",67934064,66357664
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,68194088
+	C: "OO",67932344,66359080
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70086144
+	C: "OO",67934064,68251240
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70087560
+	C: "OO",67933720,68252656
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70088976
+	C: "OO",67932344,68254072
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70090392
+	C: "OO",67934408,68255488
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70091808
+	C: "OO",67934064,68256904
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70093224
+	C: "OO",67934064,68258320
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70094640
+	C: "OO",67933376,68259736
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70096056
+	C: "OO",67934064,68261152
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70097472
+	C: "OO",67932344,68262568
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70098888
+	C: "OO",67932344,68263984
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70100304
+	C: "OO",67933720,68265400
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70101720
+	C: "OO",67934408,68266816
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70103136
+	C: "OO",67934408,68268232
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70104552
+	C: "OO",67934064,68269648
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70105968
+	C: "OO",67934408,68271064
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70107384
+	C: "OO",67933376,68272480
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70108800
+	C: "OO",67932344,68273896
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70110216
+	C: "OO",67934408,68275312
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70111632
+	C: "OO",67934408,68276728
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70113048
+	C: "OO",67934064,68278144
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70114464
+	C: "OO",67933720,68279560
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70115880
+	C: "OO",67934064,68280976
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70117296
+	C: "OO",67932344,68282392
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70151680
+	C: "OO",67934064,68316776
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70153096
+	C: "OO",67934064,68318192
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70154512
+	C: "OO",67934064,68319608
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70155928
+	C: "OO",67933720,68321024
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70157344
+	C: "OO",67933376,68322440
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70158760
+	C: "OO",67934064,68323856
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70160176
+	C: "OO",67932344,68325272
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70161592
+	C: "OO",67933720,68326688
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70163008
+	C: "OO",67934064,68328104
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70164424
+	C: "OO",67932344,68329520
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70165840
+	C: "OO",67934408,68330936
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70167256
+	C: "OO",67934064,68332352
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70168672
+	C: "OO",67933376,68333768
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70170088
+	C: "OO",67934064,68335184
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70171504
+	C: "OO",67934408,68336600
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70172920
+	C: "OO",67933376,68338016
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70174336
+	C: "OO",67933376,68339432
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70175752
+	C: "OO",67933376,68340848
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70177168
+	C: "OO",67934064,68342264
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70178584
+	C: "OO",67932344,68343680
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70180000
+	C: "OO",67934064,68345096
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70181416
+	C: "OO",67933720,68346512
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70182832
+	C: "OO",67934064,68347928
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70274560
+	C: "OO",67934408,68439656
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70275976
+	C: "OO",67933376,68441072
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70277392
+	C: "OO",67932344,68442488
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70278808
+	C: "OO",67934064,68443904
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70280224
+	C: "OO",67932344,68445320
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70281640
+	C: "OO",67933376,68446736
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70283056
+	C: "OO",67933720,68448152
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70284472
+	C: "OO",67934064,68449568
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70285888
+	C: "OO",67934064,68450984
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70287304
+	C: "OO",67933720,68452400
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70288720
+	C: "OO",67934408,68453816
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70290136
+	C: "OO",67932344,68455232
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70291552
+	C: "OO",67934408,68456648
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70292968
+	C: "OO",67932344,68458064
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70294384
+	C: "OO",67934408,68459480
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70295800
+	C: "OO",67933376,68460896
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70297216
+	C: "OO",67932344,68462312
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70298632
+	C: "OO",67933376,68463728
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70300048
+	C: "OO",67933720,68465144
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70301464
+	C: "OO",67933376,68466560
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70302880
+	C: "OO",67933376,68467976
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70304296
+	C: "OO",67932344,68469392
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70305712
+	C: "OO",67933720,68470808
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70127104
+	C: "OO",67934064,68292200
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70128520
+	C: "OO",67933376,68293616
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70129936
+	C: "OO",67934064,68295032
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70131352
+	C: "OO",67934408,68296448
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70132768
+	C: "OO",67934408,68297864
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70134184
+	C: "OO",67932344,68299280
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70135600
+	C: "OO",67932344,68300696
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70137016
+	C: "OO",67933720,68302112
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70138432
+	C: "OO",67932344,68303528
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70139848
+	C: "OO",67933376,68304944
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70141264
+	C: "OO",67934408,68306360
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70368776
+	C: "OO",67934408,68533872
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70370192
+	C: "OO",67933720,68535288
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70371608
+	C: "OO",67934408,68536704
 	
 	;Geometry::corridor_3way_wide_01, Model::corridor_3way_wide_01
-	C: "OO",69768384,70373024
+	C: "OO",67932344,68538120
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70374440
+	C: "OO",67934064,68539536
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70375856
+	C: "OO",67933376,68540952
 	
 	;Geometry::corridor_1way_Stairs_Wide_01, Model::corridor_1way_Stairs_Wide_01
-	C: "OO",69769072,70377272
+	C: "OO",67933720,68542368
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70378688
+	C: "OO",67933376,68543784
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70380104
+	C: "OO",67934064,68545200
 	
 	;Geometry::corridor_1way_wide_01, Model::corridor_1way_wide_01
-	C: "OO",69767008,70381520
+	C: "OO",67934408,68546616
 	
 	;Geometry::corridor_4way_wide_01, Model::corridor_4way_wide_01
-	C: "OO",69769416,70382936
+	C: "OO",67934064,68548032
 	
 	;Geometry::corridor_2way_wide_01, Model::corridor_2way_wide_01
-	C: "OO",69768040,70384352
+	C: "OO",67933376,68549448
 }
 ;Takes section
 ;----------------------------------------------------
