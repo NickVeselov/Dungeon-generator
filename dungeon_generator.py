@@ -272,8 +272,8 @@ class dungeon_generator:
 
   def create_dungeon(self, new_scene):
       
-      self.corridor.create_corridor(new_scene)
-      #self.room.create_room(new_scene)
+     # self.corridor.create_corridor(new_scene)
+      self.room.create_room(new_scene)
 
 
 

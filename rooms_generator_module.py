@@ -7,6 +7,8 @@ import dungeon_generator
 
 class rooms_generator:
 
+  bool lastRoom = False;
+
   def try_tile(self, new_scene, stack, edges, pos, angle, incoming, id):
     in_feature_name, in_tile_name, in_trans, in_rot = incoming
 
@@ -183,7 +185,11 @@ class rooms_generator:
     corridor_size = 25
 
     # create an unsatisfied edge
-    stack = [(pos, pos, angle, 'bigflat', False)]
+    
+    if lastRoom == True
+            stack = [(pos, pos, angle, 'bigflat', False)]
+    else
+            stack = [(pos, pos, angle, 'end', False)]
     num_tiles = 0
     random.seed(1)
 
@@ -247,6 +253,10 @@ class rooms_generator:
       num_tiles += 1
 
     while len(stack) and num_tiles == corridor_size:
+        #create final room
+
+      lastRoom = True
+
       r = random.randrange(len(stack))
       edge_pos, tile_pos, angle, out_feature_name, in_feature_name = stack.pop(r)
       
