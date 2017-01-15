@@ -10,11 +10,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2017
 		Month: 1
-		Day: 14
-		Hour: 18
-		Minute: 36
-		Second: 34
-		Millisecond: 963
+		Day: 15
+		Hour: 0
+		Minute: 20
+		Second: 30
+		Millisecond: 976
 	}
 	Creator: "FBX SDK/FBX Plugins version 2015.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -77,7 +77,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 66231664, "result", "Scene" {
+	Document: 66166128, "result", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -198,7 +198,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 68128952, "Geometry::room_2way_extrawide_01", "Mesh" {
+	Geometry: 68063416, "Geometry::room_2way_extrawide_01", "Mesh" {
 		Vertices: *159 {
 			a: 0,7.19999885559082,0,6,-6,0,-6,-8,4,0,4,6,0,7.19999885559082,4,-4,0,6,-7.20000457763672,0,2.79999995231628,0,7.19999885559082,2.79999995231628,-7.20000457763672,0,4,-7.20000457763672,0,0,6,7.19999885559082,2.79999995231628,6,4,6,-6,-8,2.79999995231628,6,7.19999885559082,0,6,7.19999885559082,4,-7.20000457763672,-6,4,-7.20000457763672,-6,2.79999995231628,-7.20000457763672,-6,0,-2,-8,5.5,-4,-6,6,2,-6,5.5,6,-6,4,8,-2,5.5,8,-6,4,2,-8,5.5,6,-8,4,-2,-6,6,2,-6,6,-6,-6,4,-6,-6,2.79999995231628,-6,-6,0,-2,-6,5.5,8,6,2.79999995231628,8,6,4,8,6,0,6,6,2.79999995231628,6,2,5.5,6,6,4,6,6,0,-6,-8,0,6,-2,5.5,6,-2,6,6,2,6,8,2,5.5,-6,0,0,6,0,0,8,0,0,8,-6,0,0,6,0,0,-6,0,0,0,0,6,-8,0,0,-8,0
 		} 
@@ -260,7 +260,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 68128264, "Geometry::room_4way_extrawide_01", "Mesh" {
+	Geometry: 68063072, "Geometry::room_4way_extrawide_01", "Mesh" {
 		Vertices: *189 {
 			a: 6,-6,0,2,-6,5.5,6,-6,4,8,-6,0,8,-2,5.5,8,-6,4,2,-8,5.5,6,-8,4,2,-6,6,6,-2,5.5,6,-2,6,6,-8,0,2,6,5.5,6,6,4,8,2,5.5,8,6,4,2,8,5.5,6,8,4,2,6,6,6,2,5.5,6,2,6,6,0,0,6,6,0,8,0,0,8,6,0,6,8,0,6,0,6,6,0,5.5,8,0,5.5,-6,-6,0,-2,-6,5.5,-6,-6,4,-8,-6,0,-8,-2,5.5,-8,-6,4,-2,-8,5.5,-6,-8,4,-2,-6,6,-6,-2,5.5,-6,-2,6,0,-6,0,-6,-8,0,0,-8,0,-2,6,5.5,-6,6,4,-8,6,0,-8,2,5.5,-8,6,4,-2,8,5.5,-6,8,4,-2,6,6,-6,2,5.5,-6,2,6,-6,0,0,-6,6,0,-8,0,0,0,6,0,0,0,0,-6,8,0,0,8,0,-6,0,6,-6,0,5.5,-8,0,5.5
 		} 
@@ -322,7 +322,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 68127920, "Geometry::room_1way_extrawide_01", "Mesh" {
+	Geometry: 68062728, "Geometry::room_1way_extrawide_01", "Mesh" {
 		Vertices: *225 {
 			a: 7.20000028610229,-7.00000095367432,0,-3.99999976158142,-7,0,4.00000047683716,-7,0,-7.20000553131104,-7.04999923706055,0,3.49691106293903e-007,-7,0,7.1999979019165,-7.00000190734863,4,3.99999737739563,-7.00000095367432,6,-3.8000020980835,-6.99999904632568,6,-7.20000457763672,-6.99999904632568,0,-7.20000648498535,-6.99999809265137,4,7.19999885559082,-7.00000095367432,2.79999995231628,-7.20000553131104,-6.99999809265137,2.79999995231628,-7.20000553131104,-0.0250000953674316,0,-3.99999976158142,-8,0,4.00000047683716,-8,0,3.49691106293903e-007,-8,0,1.99999737739563,-7.00000095367432,5.5,5.99999713897705,-7.00000190734863,4,5.99999952316284,-7.00000095367432,0,-1.8000020980835,-6.99999904632568,5.5,-6,-6.99999904632568,0,-6.00000190734863,-6.99999809265137,4,-6.00000095367432,-6.99999809265137,2.79999995231628,-1.8000020980835,-7.99999904632568,5.5,-6,-7.99999904632568,0,-6.00000190734863,-7.99999809265137,4,-6.00000095367432,-7.99999809265137,2.79999995231628,5.99999809265137,-7.00000095367432,2.79999995231628,5.99999952316284,-8.00000095367432,0,5.99999713897705,-8.00000190734863,4,1.99999737739563,-8.00000095367432,5.5,5.99999809265137,-8.00000095367432,2.79999995231628,7.20000028610229,7.00000095367432,0,-3.99999976158142,7,0,4.00000047683716,7,0,-7.20000553131104,7.04999923706055,0,3.49691106293903e-007,7,0,7.1999979019165,7.00000190734863,4,3.99999737739563,7.00000095367432,6,-3.8000020980835,6.99999904632568,6,-7.20000457763672,6.99999904632568,0,-7.20000648498535,6.99999809265137,4,7.19999885559082,7.00000095367432,2.79999995231628,-7.20000553131104,6.99999809265137,2.79999995231628,-7.20000553131104,0.0250000953674316,0,-3.99999976158142,8,0,4.00000047683716,8,0,4,0,0,3.49691106293903e-007,8,0,7.20000028610229,0,4,-4,0,0,7.19999980926514,0,0,1.99999737739563,7.00000095367432,5.5,5.99999713897705,7.00000190734863,4,0,0,0,5.99999952316284,7.00000095367432,0,-1.8000020980835,6.99999904632568,5.5,-6,6.99999904632568,0,-6.00000190734863,6.99999809265137,4,-6.00000095367432,6.99999809265137,2.79999995231628,
 -1.8000020980835,7.99999904632568,5.5,-6,7.99999904632568,0,-6.00000190734863,7.99999809265137,4,-6.00000095367432,7.99999809265137,2.79999995231628,5.99999809265137,7.00000095367432,2.79999995231628,5.99999952316284,8.00000095367432,0,5.99999713897705,8.00000190734863,4,1.99999737739563,8.00000095367432,5.5,5.99999809265137,8.00000095367432,2.79999995231628,3.99999952316284,0,6,-3.80000066757202,0,6,-7.20000457763672,0,2.79999995231628,7.20000028610229,0,2.79999995231628,-7.20000553131104,0,4,-7.20000457763672,0,0
@@ -388,7 +388,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 68128608, "Geometry::room_3way_extrawide_01", "Mesh" {
+	Geometry: 68062384, "Geometry::room_3way_extrawide_01", "Mesh" {
 		Vertices: *216 {
 			a: 5.95121955871582,-6,0,-6.04878044128418,-8,4,-6.04878044128418,-8,2.79999995231628,-7.20000267028809,-6,4,-7.20000267028809,-6,2.79999995231628,-7.20000267028809,-6,0,-2.04878044128418,-8,5.5,-4.04878044128418,-6,6,1.95121943950653,-6,5.5,5.95121955871582,-6,4,7.95121955871582,-2,5.5,7.95121955871582,-6,4,1.95121943950653,-8,5.5,5.95121955871582,-8,4,-2.04878044128418,-6,6,1.95121943950653,-6,6,-6.04878044128418,-6,4,-6.04878044128418,-6,2.79999995231628,-6.04878044128418,-6,0,-2.04878044128418,-6,5.5,-6.04878044128418,-8,0,5.95121955871582,-2,5.5,5.95121955871582,-2,6,7.95121955871582,-6,0,-0.0487804859876633,-6,0,5.95121955871582,-8,0,-0.0487804859876633,-8,0,5.95121955871582,6,0,-6.04878044128418,8,4,-4.04878044128418,0,6,-7.20000267028809,0,2.79999995231628,-7.20000267028809,0,4,-7.20000267028809,0,0,-6.04878044128418,8,2.79999995231628,-7.20000267028809,6,4,-7.20000267028809,6,2.79999995231628,-7.20000267028809,6,0,-2.04878044128418,8,5.5,-4.04878044128418,6,6,1.95121943950653,6,5.5,5.95121955871582,6,4,7.95121955871582,6,0,7.95121955871582,2,5.5,7.95121955871582,6,4,1.95121943950653,8,5.5,5.95121955871582,8,4,-2.04878044128418,6,6,1.95121943950653,6,6,-6.04878044128418,6,4,-6.04878044128418,6,2.79999995231628,-6.04878044128418,6,0,-2.04878044128418,6,5.5,5.95121955871582,2,5.5,5.95121955871582,2,6,-6.04878044128418,0,0,5.95121955871582,0,0,7.95121955871582,0,0,-0.0487804859876633,6,0,-0.0487804859876633,0,0,-6.04878044128418,8,0,5.95121955871582,8,0,-0.0487804859876633,8,0,5.95121955871582,0,6,5.95121955871582,0,5.5,7.95121955871582,0,5.5,-0.0487804859876633,-6,5.5,-0.0487804859876633,-6,6,-0.0487804859876633,-8,5.5,-0.0487804859876633,6,5.5,-0.0487804859876633,6,6,-0.0487804859876633,8,5.5,-0.0487804859876633,0,6
 		} 
@@ -451,7 +451,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 66548608, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 66483072, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -461,7 +461,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 66550024, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 66484488, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -471,7 +471,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 66551440, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 66485904, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -482,7 +482,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 66552856, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 66487320, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -493,7 +493,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 66554272, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 66488736, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -504,7 +504,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 66555688, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 66490152, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -515,7 +515,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68296624, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68231144, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -526,7 +526,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68298040, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68232560, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -537,7 +537,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68299456, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68233976, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -548,7 +548,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68300872, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68235392, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -559,7 +559,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68302288, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68236808, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -570,7 +570,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68303704, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68238224, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -581,7 +581,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68305120, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68239640, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -592,7 +592,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68306536, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68241056, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -603,7 +603,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68307952, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68242472, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -614,7 +614,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68309368, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68243888, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -625,7 +625,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68310784, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68245304, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -636,7 +636,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68312200, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68246720, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -647,7 +647,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68313616, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68248136, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -658,7 +658,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68315032, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68249552, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -669,7 +669,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68316448, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68250968, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -680,7 +680,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68317864, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68252384, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -691,7 +691,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68319280, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68253800, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -702,7 +702,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68320696, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68255216, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -713,7 +713,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68322112, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68256632, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -724,7 +724,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68323528, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68258048, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -735,7 +735,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68324944, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68259464, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -746,7 +746,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68326360, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68260880, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -757,7 +757,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68327776, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68262296, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -768,7 +768,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68370352, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68304872, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -779,7 +779,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68371768, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68306288, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -790,7 +790,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68373184, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68307704, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -801,7 +801,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68374600, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68309120, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -812,7 +812,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68376016, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68310536, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -823,7 +823,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68377432, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68311952, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -834,7 +834,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68378848, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68313368, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -845,7 +845,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68380264, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68314784, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -856,7 +856,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68381680, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68316200, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -867,7 +867,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68383096, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68317616, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -878,7 +878,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68384512, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68319032, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -889,7 +889,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68385928, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68320448, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -900,7 +900,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68387344, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68321864, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -911,7 +911,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68388760, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68323280, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -922,7 +922,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68390176, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68324696, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -933,7 +933,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68391592, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68326112, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -944,7 +944,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68393008, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68327528, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -955,7 +955,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68394424, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68328944, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -966,7 +966,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68395840, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68330360, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -977,7 +977,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68397256, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68331776, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -988,7 +988,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68398672, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68333192, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -999,7 +999,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68400088, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68334608, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1010,7 +1010,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68401504, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68336024, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1021,7 +1021,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68501424, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68435944, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1032,7 +1032,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68502840, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68437360, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1043,7 +1043,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68504256, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68438776, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1054,7 +1054,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68505672, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68440192, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1065,7 +1065,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68507088, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68441608, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1076,7 +1076,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68508504, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68443024, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1087,7 +1087,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68509920, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68444440, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1098,7 +1098,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68511336, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68445856, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1109,7 +1109,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68512752, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68447272, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1120,7 +1120,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68514168, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68448688, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1131,7 +1131,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68515584, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68450104, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1142,7 +1142,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68517000, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68451520, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1153,7 +1153,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68518416, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68452936, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1164,7 +1164,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68519832, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68454352, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1175,7 +1175,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68521248, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68455768, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1186,7 +1186,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68522664, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68457184, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1196,7 +1196,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68524080, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68458600, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1206,7 +1206,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68525496, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68460016, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1217,7 +1217,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68526912, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68461432, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1228,7 +1228,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68528328, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68462848, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1239,7 +1239,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68529744, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68464264, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1249,7 +1249,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68531160, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68465680, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1259,7 +1259,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68532576, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68467096, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1270,7 +1270,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68411312, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68345832, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1281,7 +1281,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68412728, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68347248, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1292,7 +1292,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68414144, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68348664, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1303,7 +1303,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68415560, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68350080, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1314,7 +1314,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68416976, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68351496, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1325,7 +1325,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68418392, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68352912, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1336,7 +1336,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68419808, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68354328, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1347,7 +1347,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68421224, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68355744, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1358,7 +1358,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68422640, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68357160, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1369,7 +1369,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68424056, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68358576, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1380,7 +1380,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68425472, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68359992, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1391,7 +1391,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68607920, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68542440, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1402,7 +1402,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68609336, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68543856, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1412,7 +1412,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68610752, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68545272, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1423,7 +1423,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68612168, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68546688, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1434,7 +1434,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68613584, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68548104, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1445,7 +1445,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68615000, "Model::room_1way_extrawide_01", "Mesh" {
+	Model: 68549520, "Model::room_1way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1456,7 +1456,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68616416, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68550936, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1467,7 +1467,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68617832, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68552352, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1478,7 +1478,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68619248, "Model::room_4way_extrawide_01", "Mesh" {
+	Model: 68553768, "Model::room_4way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1488,7 +1488,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68620664, "Model::room_2way_extrawide_01", "Mesh" {
+	Model: 68555184, "Model::room_2way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1499,7 +1499,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 68622080, "Model::room_3way_extrawide_01", "Mesh" {
+	Model: 68556600, "Model::room_3way_extrawide_01", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -1518,586 +1518,586 @@ Objects:  {
 Connections:  {
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",66548608,0
+	C: "OO",66483072,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",66550024,0
+	C: "OO",66484488,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",66551440,0
+	C: "OO",66485904,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",66552856,0
+	C: "OO",66487320,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",66554272,0
+	C: "OO",66488736,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",66555688,0
+	C: "OO",66490152,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68296624,0
+	C: "OO",68231144,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68298040,0
+	C: "OO",68232560,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68299456,0
+	C: "OO",68233976,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68300872,0
+	C: "OO",68235392,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68302288,0
+	C: "OO",68236808,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68303704,0
+	C: "OO",68238224,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68305120,0
+	C: "OO",68239640,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68306536,0
+	C: "OO",68241056,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68307952,0
+	C: "OO",68242472,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68309368,0
+	C: "OO",68243888,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68310784,0
+	C: "OO",68245304,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68312200,0
+	C: "OO",68246720,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68313616,0
+	C: "OO",68248136,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68315032,0
+	C: "OO",68249552,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68316448,0
+	C: "OO",68250968,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68317864,0
+	C: "OO",68252384,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68319280,0
+	C: "OO",68253800,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68320696,0
+	C: "OO",68255216,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68322112,0
+	C: "OO",68256632,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68323528,0
+	C: "OO",68258048,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68324944,0
+	C: "OO",68259464,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68326360,0
+	C: "OO",68260880,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68327776,0
+	C: "OO",68262296,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68370352,0
+	C: "OO",68304872,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68371768,0
+	C: "OO",68306288,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68373184,0
+	C: "OO",68307704,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68374600,0
+	C: "OO",68309120,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68376016,0
+	C: "OO",68310536,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68377432,0
+	C: "OO",68311952,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68378848,0
+	C: "OO",68313368,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68380264,0
+	C: "OO",68314784,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68381680,0
+	C: "OO",68316200,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68383096,0
+	C: "OO",68317616,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68384512,0
+	C: "OO",68319032,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68385928,0
+	C: "OO",68320448,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68387344,0
+	C: "OO",68321864,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68388760,0
+	C: "OO",68323280,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68390176,0
+	C: "OO",68324696,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68391592,0
+	C: "OO",68326112,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68393008,0
+	C: "OO",68327528,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68394424,0
+	C: "OO",68328944,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68395840,0
+	C: "OO",68330360,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68397256,0
+	C: "OO",68331776,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68398672,0
+	C: "OO",68333192,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68400088,0
+	C: "OO",68334608,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68401504,0
+	C: "OO",68336024,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68501424,0
+	C: "OO",68435944,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68502840,0
+	C: "OO",68437360,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68504256,0
+	C: "OO",68438776,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68505672,0
+	C: "OO",68440192,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68507088,0
+	C: "OO",68441608,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68508504,0
+	C: "OO",68443024,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68509920,0
+	C: "OO",68444440,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68511336,0
+	C: "OO",68445856,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68512752,0
+	C: "OO",68447272,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68514168,0
+	C: "OO",68448688,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68515584,0
+	C: "OO",68450104,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68517000,0
+	C: "OO",68451520,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68518416,0
+	C: "OO",68452936,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68519832,0
+	C: "OO",68454352,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68521248,0
+	C: "OO",68455768,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68522664,0
+	C: "OO",68457184,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68524080,0
+	C: "OO",68458600,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68525496,0
+	C: "OO",68460016,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68526912,0
+	C: "OO",68461432,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68528328,0
+	C: "OO",68462848,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68529744,0
+	C: "OO",68464264,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68531160,0
+	C: "OO",68465680,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68532576,0
+	C: "OO",68467096,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68411312,0
+	C: "OO",68345832,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68412728,0
+	C: "OO",68347248,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68414144,0
+	C: "OO",68348664,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68415560,0
+	C: "OO",68350080,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68416976,0
+	C: "OO",68351496,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68418392,0
+	C: "OO",68352912,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68419808,0
+	C: "OO",68354328,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68421224,0
+	C: "OO",68355744,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68422640,0
+	C: "OO",68357160,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68424056,0
+	C: "OO",68358576,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68425472,0
+	C: "OO",68359992,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68607920,0
+	C: "OO",68542440,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68609336,0
+	C: "OO",68543856,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68610752,0
+	C: "OO",68545272,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68612168,0
+	C: "OO",68546688,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68613584,0
+	C: "OO",68548104,0
 	
 	;Model::room_1way_extrawide_01, Model::RootNode
-	C: "OO",68615000,0
+	C: "OO",68549520,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68616416,0
+	C: "OO",68550936,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68617832,0
+	C: "OO",68552352,0
 	
 	;Model::room_4way_extrawide_01, Model::RootNode
-	C: "OO",68619248,0
+	C: "OO",68553768,0
 	
 	;Model::room_2way_extrawide_01, Model::RootNode
-	C: "OO",68620664,0
+	C: "OO",68555184,0
 	
 	;Model::room_3way_extrawide_01, Model::RootNode
-	C: "OO",68622080,0
+	C: "OO",68556600,0
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,66548608
+	C: "OO",68063416,66483072
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,66550024
+	C: "OO",68063072,66484488
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,66551440
+	C: "OO",68062728,66485904
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,66552856
+	C: "OO",68062384,66487320
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,66554272
+	C: "OO",68062728,66488736
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,66555688
+	C: "OO",68063072,66490152
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68296624
+	C: "OO",68063072,68231144
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68298040
+	C: "OO",68063072,68232560
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68299456
+	C: "OO",68063072,68233976
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68300872
+	C: "OO",68062728,68235392
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68302288
+	C: "OO",68062384,68236808
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68303704
+	C: "OO",68062384,68238224
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68305120
+	C: "OO",68063072,68239640
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68306536
+	C: "OO",68062728,68241056
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68307952
+	C: "OO",68063072,68242472
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68309368
+	C: "OO",68062384,68243888
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68310784
+	C: "OO",68063416,68245304
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68312200
+	C: "OO",68063072,68246720
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68313616
+	C: "OO",68062728,68248136
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68315032
+	C: "OO",68062384,68249552
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68316448
+	C: "OO",68062728,68250968
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68317864
+	C: "OO",68062728,68252384
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68319280
+	C: "OO",68062728,68253800
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68320696
+	C: "OO",68063072,68255216
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68322112
+	C: "OO",68063072,68256632
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68323528
+	C: "OO",68062728,68258048
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68324944
+	C: "OO",68062384,68259464
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68326360
+	C: "OO",68063072,68260880
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68327776
+	C: "OO",68063416,68262296
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68370352
+	C: "OO",68062384,68304872
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68371768
+	C: "OO",68062728,68306288
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68373184
+	C: "OO",68063072,68307704
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68374600
+	C: "OO",68063416,68309120
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68376016
+	C: "OO",68063072,68310536
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68377432
+	C: "OO",68063072,68311952
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68378848
+	C: "OO",68063072,68313368
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68380264
+	C: "OO",68063416,68314784
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68381680
+	C: "OO",68062384,68316200
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68383096
+	C: "OO",68063416,68317616
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68384512
+	C: "OO",68063072,68319032
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68385928
+	C: "OO",68063416,68320448
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68387344
+	C: "OO",68063072,68321864
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68388760
+	C: "OO",68062384,68323280
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68390176
+	C: "OO",68062728,68324696
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68391592
+	C: "OO",68062384,68326112
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68393008
+	C: "OO",68063072,68327528
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68394424
+	C: "OO",68063072,68328944
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68395840
+	C: "OO",68062728,68330360
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68397256
+	C: "OO",68063416,68331776
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68398672
+	C: "OO",68063072,68333192
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68400088
+	C: "OO",68062384,68334608
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68401504
+	C: "OO",68062728,68336024
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68501424
+	C: "OO",68062384,68435944
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68502840
+	C: "OO",68063416,68437360
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68504256
+	C: "OO",68063072,68438776
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68505672
+	C: "OO",68062384,68440192
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68507088
+	C: "OO",68063072,68441608
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68508504
+	C: "OO",68062728,68443024
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68509920
+	C: "OO",68063072,68444440
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68511336
+	C: "OO",68063416,68445856
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68512752
+	C: "OO",68062384,68447272
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68514168
+	C: "OO",68062384,68448688
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68515584
+	C: "OO",68063072,68450104
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68517000
+	C: "OO",68063416,68451520
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68518416
+	C: "OO",68062384,68452936
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68519832
+	C: "OO",68063072,68454352
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68521248
+	C: "OO",68063072,68455768
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68522664
+	C: "OO",68062384,68457184
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68524080
+	C: "OO",68062728,68458600
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68525496
+	C: "OO",68063072,68460016
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68526912
+	C: "OO",68063072,68461432
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68528328
+	C: "OO",68063072,68462848
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68529744
+	C: "OO",68062728,68464264
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68531160
+	C: "OO",68063416,68465680
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68532576
+	C: "OO",68063072,68467096
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68411312
+	C: "OO",68062384,68345832
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68412728
+	C: "OO",68062384,68347248
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68414144
+	C: "OO",68063072,68348664
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68415560
+	C: "OO",68062728,68350080
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68416976
+	C: "OO",68063072,68351496
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68418392
+	C: "OO",68062728,68352912
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68419808
+	C: "OO",68062384,68354328
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68421224
+	C: "OO",68063072,68355744
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68422640
+	C: "OO",68063072,68357160
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68424056
+	C: "OO",68063072,68358576
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68425472
+	C: "OO",68062384,68359992
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68607920
+	C: "OO",68063072,68542440
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68609336
+	C: "OO",68063416,68543856
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68610752
+	C: "OO",68063416,68545272
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68612168
+	C: "OO",68063072,68546688
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68613584
+	C: "OO",68063416,68548104
 	
 	;Geometry::room_1way_extrawide_01, Model::room_1way_extrawide_01
-	C: "OO",68127920,68615000
+	C: "OO",68062728,68549520
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68616416
+	C: "OO",68063416,68550936
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68617832
+	C: "OO",68063072,68552352
 	
 	;Geometry::room_4way_extrawide_01, Model::room_4way_extrawide_01
-	C: "OO",68128264,68619248
+	C: "OO",68063072,68553768
 	
 	;Geometry::room_2way_extrawide_01, Model::room_2way_extrawide_01
-	C: "OO",68128952,68620664
+	C: "OO",68063416,68555184
 	
 	;Geometry::room_3way_extrawide_01, Model::room_3way_extrawide_01
-	C: "OO",68128608,68622080
+	C: "OO",68062384,68556600
 }
 ;Takes section
 ;----------------------------------------------------
