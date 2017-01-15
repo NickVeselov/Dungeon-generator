@@ -3,15 +3,16 @@ import random
 import fbx
 
 import dungeon_generator
+from inspect import stack
 
 
 class rooms_generator:
 
-  bool lastRoom = False;
+
+  lastRoom = False;
 
   def try_tile(self, new_scene, stack, edges, pos, angle, incoming, id):
     in_feature_name, in_tile_name, in_trans, in_rot = incoming
-
     # from the feature, set the position and rotation of the new tile
     new_angle = dungeon_generator.lim360(angle - in_rot[2])
     tile_pos = dungeon_generator.add3(pos, dungeon_generator.rotateZ(dungeon_generator.neg3(in_trans), new_angle))
@@ -186,10 +187,10 @@ class rooms_generator:
 
     # create an unsatisfied edge
     
-    if lastRoom == True
-            stack = [(pos, pos, angle, 'bigflat', False)]
-    else
-            stack = [(pos, pos, angle, 'end', False)]
+   # if (lastRoom):
+    stack = [(pos, pos, angle, 'bigflat', False)]
+   # else :
+   #   stack = [(pos, pos, angle, 'end', False)]
     num_tiles = 0
     random.seed(1)
 
