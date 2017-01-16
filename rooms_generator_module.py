@@ -58,99 +58,7 @@ class rooms_generator:
     print("pass")
     return True 
 
-  def close_ends(self, scene, stack, distance, tile_categories, open_gates_number, edges):
-    root_node = scene.GetRootNode()
-    tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
-    while len(stack) > open_gates_number:
-        edge_pos, tile_pos, angle, out_feature_name, in_feature_name = stack.pop(random.randrange(len(stack)))
-        tile = False
-        tile_pos = dungeon_generator.round3(tile_pos)
-        
-        #find tile in the scene
-        for node in tiles:            
-            pos = dungeon_generator.round3(node.LclTranslation.Get())
-            if (pos == tile_pos):
-                tile = node
-        
-        if tile:
-            category = tile_categories[tile.GetName()]
-            
-            if category == '1way':
-                exits_number = 1
-            elif category == '2way':
-                exits_number = 2
-            elif category == '3way':
-                exits_number = 3
-            elif category == '4way':
-                exits_number = 4
-            else:
-                exits_number = 0
-
-            search_finished = False
-            angles = []
-            angles.append(angle)
-
-            #while not search_finished:
-            #    search_finished = True
-            #    for cone in stack:
-            #        if dungeon_generator.round3(cone[1]) == tile_pos:
-            #            angles.append(cone[2])
-            #            stack.remove(cone)
-            #            search_finished = False
-            #            break
-            substitution_tile_name = False
-
-            edges_number = 0
-            id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[0, distance, 0]))
-            if id in edges:
-                if edges[id][3] == None:
-                    #++edges_number
-                    angles.append(edges[id][1])
-            id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[0, -distance, 0]))
-            if id in edges:
-                if edges[id][3] == None:
-                    #++edges_number
-                    angles.append(edges[id][1])
-            id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[distance, 0, 0]))
-            if id in edges:
-                if edges[id][3] == None:
-                    #++edges_number
-                    angles.append(edges[id][1])
-            id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[-distance, 0, 0]))
-            if id in edges:
-                if edges[id][3] == None:
-                    #++edges_number
-                    angles.append(edges[id][1])
-            
-            if edges_number == 1:
-                substitution_tile_name = 'room_wall_extrawide_01'
-            #if edges_number == 2:
-                #if category == '4way':
-
-            #if len(angles) == 3:
-            #    substitution_tile_name = 'corridor_1way_wide_01'
-
-            #    connections_number = 0
-
-
-
-            #elif len(angles) == 2:
-            #    if abs(angles[0] - angles[1]) == 180:
-            #        substitution_tile_name = 'corridor_1way_wide_01'
-            #    else:
-            #        substitution_tile_name = 'corridor_2way_wide_01'
-            #        tile.LclRotation.Set(fbx.FbxDouble3(0, 0, min(angles[0], angles[1])))
-            #elif len(angles) == 1:
-                #if exits_number == 3:
-                    #substitution_tile_name = 'corridor_2way_wide_01'
-                    #tile.LclRotation.Set(fbx.FbxDouble3(0, 0, angles[0]))
-            
-            #if substitution_tile_name:
-                #tile.SetNodeAttribute(self.tile_meshes[substitution_tile_name])
-    
-    
-    #check overlapping for all nodes
-    #for node in tiles:
+ 
     
   def check_neighbours(self, scene, new_el_loc, node_name):
     new_el_half_size = div3byconst(self.bb[node_name], 2)
@@ -311,4 +219,4 @@ class rooms_generator:
       num_tiles += 1
 
     
-    self.close_ends(new_scene, stack, 4, tile_categories, 2, edges)
+    #self.close_ends(new_scene, stack, 4, tile_categories, 2, edges)
