@@ -55,7 +55,7 @@ class corridor_generator:
     print("pass")
     return True 
 
-# HEAD
+<<<<<<< HEAD
   def close_ends(self, scene, stack, distance, tile_categories, open_gates_number, edges):
     root_node = scene.GetRootNode()
     tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
@@ -214,6 +214,38 @@ class corridor_generator:
     print("Substitution complete. ", fit_tiles_number, "/", (fit_tiles_number + unfit_tiles_number), "substitutions complete.")
     if unstr != 0:
         print("UNSTR = ",unstr)
+=======
+            #if edges_number == 1:
+                #substitution_tile_name = 'corridor_1way_wide_01'
+            #if edges_number == 2:
+                #if category == '4way':
+
+            #if len(angles) == 3:
+            #    substitution_tile_name = 'corridor_1way_wide_01'
+
+            #    connections_number = 0
+
+
+
+            #elif len(angles) == 2:
+            #    if abs(angles[0] - angles[1]) == 180:
+            #        substitution_tile_name = 'corridor_1way_wide_01'
+            #    else:
+            #        substitution_tile_name = 'corridor_2way_wide_01'
+            #        tile.LclRotation.Set(fbx.FbxDouble3(0, 0, min(angles[0], angles[1])))
+            #elif len(angles) == 1:
+                #if exits_number == 3:
+                    #substitution_tile_name = 'corridor_2way_wide_01'
+                    #tile.LclRotation.Set(fbx.FbxDouble3(0, 0, angles[0]))
+            
+
+    
+    #check overlapping for all nodes
+    #for node in tiles:
+    
+  #def find_missing(self, sides):
+
+>>>>>>> 6ea336cf383eb91f3d4240681a31a7b8540649bd
 
   def check_neighbours(self, scene, new_el_loc, node_name):
     new_el_half_size = div3byconst(self.bb[node_name], 2)
@@ -315,7 +347,11 @@ class corridor_generator:
       if not element_placed:
          open_edges_deleted_from_stack.append((edge_pos, tile_pos, angle, out_feature_name, in_feature_name))
 
+<<<<<<< HEAD
       num_tiles += 1
     while len(open_edges_deleted_from_stack) > 0:
         stack.append(open_edges_deleted_from_stack.pop())
     self.close_ends(new_scene, stack, 4, tile_categories, 0, edges)
+=======
+    #self.close_ends(new_scene, stack, 4, tile_categories, 0, edges)
+>>>>>>> 6ea336cf383eb91f3d4240681a31a7b8540649bd
