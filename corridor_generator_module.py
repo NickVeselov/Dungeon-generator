@@ -108,13 +108,12 @@ class corridor_generator:
                         # make an unsatisfied edge
                         edge = (new_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None)
                         edges[dungeon_generator.xy_location(new_pos)] = edge
-                        stack.append((new_pos, tile_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None))
                       else:
                           if not (edges[dungeon_generator.xy_location(new_pos)][3]):
                             edge = (new_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None)
                             edges[dungeon_generator.xy_location(new_pos)] = edge
-                            stack.append((new_pos, tile_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None))
-                    
+                      stack.append((new_pos, tile_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None))
+
                                    
                 elif not(self.free_space):
                     #place wall                    
@@ -255,9 +254,24 @@ class corridor_generator:
                 corridor_name = 'corridor_1way_'+width+'_01'
                 stack = []
                 
-                incoming = (width, corridor_name, dungeon_generator.sub3(tile_pos,connector_pos), [0, 0, connector_angle]) 
+                #if name == 'corridor_2way_wide_01':
+                #        if 'top' not in self.open_edges and 'right' not in self.open_edges:
+                #            connector_angle = 90
+                #        elif 'right' not in self.open_edges and 'bottom' not in self.open_edges:
+                #            connector_angle = 0
+                #        elif 'bottom' not in self.open_edges and 'left' not in self.open_edges:
+                #            connector_angle = 270
+                #        else:
+                #            connector_angle = 180
+                wide_inc = self.incoming['wide']
+                for inc in wide_inc:
+                    if 'corridor_1way_wide_01' in inc[1]:
+                        incoming = inc
+                #incoming = (width, corridor_name, dungeon_generator.sub3(connector_pos, tile_pos), [0, 0, connector_angle]) 
                 if self.try_tile(scene, stack, edges, connector_pos, connector_angle, incoming, id, True):
                     self.room_connectors.append((stack.pop()))
+                    self.free_space = True
+                    return True
                 self.free_space = False
                 self.continuation = 'corridor_wall_' + width
                 return True
@@ -297,7 +311,7 @@ class corridor_generator:
     while len(stack) and num_tiles < corridor_size:
 
       r = random.randrange(len(stack))
-      edge_pos, tile_pos, angle, out_feature_name, in_feature_name = stack.pop()#r)
+      edge_pos, tile_pos, angle, out_feature_name, in_feature_name = stack.pop()
       
       print(dungeon_generator.xy_location(pos))
       element_placed = False
@@ -356,6 +370,7 @@ class corridor_generator:
     self.close_ends(new_scene, stack, 4, tile_categories, edges, )
         
     stack = []
+    #add transition doorway
     for connector in self.room_connectors:
         connector_pos, tile_pos, tile_angle, inc, outg = connector
         wide_tiles = self.door_incoming[inc]
@@ -365,11 +380,14 @@ class corridor_generator:
             incoming = self.door_incoming[inc][1]        
         self.try_tile(new_scene, stack, edges, connector_pos, tile_angle, incoming, 0, False)
     rooms_stack = []
+
+    #add room
     for connector in stack:
         connector_pos, tile_pos, tile_angle, inc, outg = connector
         incoming = self.rooms_incoming[inc][0]      
         self.try_tile(new_scene, rooms_stack, edges, connector_pos, tile_angle, incoming, 0, True)
 
+    #add wall
     for connector in rooms_stack:
         connector_pos, tile_pos, tile_angle, inc, outg = connector   
         wall_name = 'room_wall_'+inc          

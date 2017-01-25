@@ -31,8 +31,11 @@ def div3byconst(x,num):
 def neg3(x):
   return [-x[i] for i in range(3)]
 
+def round3(x):
+  return [round(x[i]) for i in range(3)]
+
 def less3(x,y):
-    return ((x[0] <= y[0]) and (x[1]<=y[1]) and (x[2]<=y[2]))
+    return ((x[0] < y[0]) and (x[1]<y[1]) and (x[2]<y[2]))
 
 def xy_location(x):
   return (round(x[0]), round(x[1]))
@@ -64,7 +67,7 @@ class dungeon_generator:
   def read_components(self):
     importer = fbx.FbxImporter.Create(self.sdk_manager, "")    
 
-    result = importer.Initialize("scenes/componentz2.fbx", -1, self.io_settings)
+    result = importer.Initialize("scenes/components.fbx", -1, self.io_settings)
     if not result:
       raise BaseException("could not find components file")
     
@@ -194,7 +197,7 @@ class dungeon_generator:
                 self.corridor.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
                 self.corridor.tiles[tile_name] = node
         elif is_doorway:
-            self.corridor.bb[tile_name] = [16, 1, 10]
+            self.corridor.bb[tile_name] = [16, 0.5, 10]
             
     # at this point incoming and outgoing index connectors
     # tiles indexes the tiles by name.
@@ -220,7 +223,7 @@ class dungeon_generator:
 
     exporter = fbx.FbxExporter.Create(self.sdk_manager, "")
     
-    if exporter.Initialize("scenes/result3.fbx", format, self.io_settings):
+    if exporter.Initialize("scenes/result2.fbx", format, self.io_settings):
       exporter.Export(new_scene)
 
     exporter.Destroy()
@@ -238,48 +241,26 @@ class dungeon_generator:
     new_el_half_size = div3byconst(self.bb[node_name], 2)
     root_node = scene.GetRootNode()
     tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
+    epsilon = [0.1, 0.1, 0.1]
     #check overlapping for all nodes
     for node in tiles:
-<<<<<<< HEAD
-        if node.GetName() in self.bb:        
-            old_el_loc = node.LclTranslation.Get()
-            old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
-            diff = round3(abs3(sub3(new_el_loc, old_el_loc)))#-32 44 4
-            half_size = round3(add3(old_el_half_size, new_el_half_size))
-            if less3(diff, half_size):
-                return False
-=======
-        old_el_loc = node.LclTranslation.Get()
-        old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
-        diff = sub3(new_el_loc, old_el_loc)
-        if (less3(abs3(diff), old_el_half_size + new_el_half_size)):
-            return False
->>>>>>> 6ca25400113869d249b47818f2560b03126e07f3
+        tile_name = node.GetName()
+        if tile_name in self.bb:        
+            if 'doorway' not in tile_name:
+                old_el_loc = node.LclTranslation.Get()
+                old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
+                diff = abs3(sub3(new_el_loc, old_el_loc))
+                half_size = sub3(add3(old_el_half_size, new_el_half_size),epsilon)
+                if less3(diff, half_size):
+                    return False
     return True
 
  
 
   def create_dungeon(self, new_scene):
-<<<<<<< HEAD
       self.corridor.endings = []
       pos = (0, 0, 0)
       angle = 0
       size = 100
       self.corridor.bb[self.corridor.room_tile_name] = [16, 16, 16]
       self.corridor.create_corridor(new_scene, size, pos, pos, angle, 'wide', False)
-=======
-      
-     # self.corridor.create_corridor(new_scene)
-      self.room.create_room(new_scene)
-
-
-
-      ### Below this comment is old Andy's code
-      ### For Jack -> Instead, here should be combination of module creation (corridors & rooms)
-      ### For Luke -> You can test your code here, by changing line 255 to the call of your function
-
-
-
-
-    
->>>>>>> 6ca25400113869d249b47818f2560b03126e07f3
