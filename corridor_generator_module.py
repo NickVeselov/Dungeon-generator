@@ -7,7 +7,7 @@ import dungeon_generator
 
 class corridor_generator:
 
-  def try_tile(self, new_scene, stack, edges, pos, angle, incoming, id):
+  def try_tile(self, new_scene, stack, edges, pos, angle, incoming, id, check_overlap):
     in_feature_name, in_tile_name, in_trans, in_rot = incoming
 
     # from the feature, set the position and rotation of the new tile
@@ -34,9 +34,9 @@ class corridor_generator:
         if abs(edge_pos[2] - new_pos[2]) > 0.01:
           print("fail")
           return False
-
-    if not dungeon_generator.dungeon_generator.check_for_overlapping(self, new_scene, tile_pos,tile_name):
-        return False
+    if check_overlap:
+        if not dungeon_generator.dungeon_generator.check_for_overlapping(self, new_scene, tile_pos,tile_name):
+            return False
     # add all outgoing edges to the todo list and mark edges
     # note: if there were multiple outgoing edge choices, we would have to select them.
     for out_sel in range(len(outgoing)):
@@ -55,14 +55,11 @@ class corridor_generator:
     print("pass")
     return True 
 
-# HEAD
-  def close_ends(self, scene, stack, distance, tile_categories, open_gates_number, edges):
+  def close_ends(self, scene, stack, distance, tile_categories, edges):
     root_node = scene.GetRootNode()
     tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
-    unfit_tiles_number = 0
-    fit_tiles_number = 0
-    unstr = 0
-    while len(stack) > open_gates_number:
+
+    while len(stack) > 0:
         edge_pos, tile_pos, angle, out_feature_name, in_feature_name = stack.pop()
         tile = False
         tile_pos = dungeon_generator.round3(tile_pos)
@@ -77,22 +74,10 @@ class corridor_generator:
         if tile:
             name = tile.GetName()
             category = tile_categories[name]
-            
-            if category == '1way':
-                exits_number = 1
-            elif category == '2way':
-                exits_number = 2
-            elif category == '3way':
-                exits_number = 3
-            elif category == '4way':
-                exits_number = 4
-            else:
-                exits_number = 0
 
             search_finished = False
-            open_edges = []
-            closed_edges = []
-            
+            self.open_edges = []
+            self.closed_edges = []            
 
             while not search_finished:
                 search_finished = True
@@ -101,134 +86,186 @@ class corridor_generator:
                         stack.remove(cone)
                         search_finished = False
                         break
-            substitution_tile_name = False
+            self.substitution_tile_name = False
+                        
+            self.characterize_ending(stack, edges, category, tile_pos, distance);            
 
+            if self.pick_substitution(scene, edges, out_feature_name, category, name, edge_pos,angle, tile_pos, self.incoming[out_feature_name], distance):
+                if self.substitution_tile_name:
+                    self.outgoing
+                    a = tile.GetNodeAttribute(); 
+                    tile.SetNodeAttribute(self.tile_meshes[self.substitution_tile_name])
+                    b = tile.GetNodeAttribute();
+                    tile.LclRotation.Set(fbx.FbxDouble3(0, 0, self.substitution_tile_angle))
+                    tile.SetName(self.substitution_tile_name)                
+                    print("Tile substituted", self.closed_edges, self.substitution_tile_name,"->",name, tile_pos)  
+                    
+                    outgoing = self.outgoing[self.substitution_tile_name]
+                    for out_sel in range(len(outgoing)):
+                      out_feature_name, out_tile_name, out_trans, out_rot = outgoing[out_sel]
+                      new_pos = dungeon_generator.add3(tile_pos, dungeon_generator.rotateZ(out_trans, self.substitution_tile_angle))
+                      if not dungeon_generator.xy_location(new_pos) in edges:
+                        # make an unsatisfied edge
+                        edge = (new_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None)
+                        edges[dungeon_generator.xy_location(new_pos)] = edge
+                        stack.append((new_pos, tile_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None))
+                      else:
+                          if not (edges[dungeon_generator.xy_location(new_pos)][3]):
+                            edge = (new_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None)
+                            edges[dungeon_generator.xy_location(new_pos)] = edge
+                            stack.append((new_pos, tile_pos, dungeon_generator.lim360(self.substitution_tile_angle + out_rot[2]), out_feature_name, None))
+                    
+                                   
+                elif not(self.free_space):
+                    #place wall                    
+                    wall = self.walls[self.continuation]
+
+                    wall_angle = angle
+
+                    if wall.GetChildCount() != 1:
+                            print("Wall has incorrect children number:", wall)
+                    else:
+                        child = wall.GetChild(0)
+                        connector_loc = child.LclTranslation.Get()
+                        a = wall.LclTranslation.Get()
+                        wall_pos = dungeon_generator.sub3(edge_pos, [0, 0, connector_loc[2]])
+                                                          
+                        new_node = fbx.FbxNode.Create(scene, self.continuation)
+                        new_node.SetNodeAttribute(self.tile_meshes[self.continuation])
+                        new_node.LclTranslation.Set(fbx.FbxDouble3(wall_pos[0], wall_pos[1], wall_pos[2]))
+                        new_node.LclRotation.Set(fbx.FbxDouble3(0, 0, wall_angle))
+                        root = scene.GetRootNode()
+                        root.AddChild(new_node)  
+                        print("Wall added. Tile name = ", name, " Tile pos =", dungeon_generator.round3(tile_pos),
+                              " Wall pos = ",dungeon_generator.round3(edge_pos)," Angle =", wall_angle)
+  
+  def characterize_ending(self, stack, edges, category, tile_pos, distance):
             edges_number = 0
+            ids = []
             id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[0, distance, 0]))
             if id in edges:
+                ids.append(id)
                 if edges[id][3] == None:
-                    open_edges.append('top')
+                    self.open_edges.append('top')
                 else:
-                    closed_edges.append('top')
+                    self.closed_edges.append('top')
             id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[0, -distance, 0]))
             if id in edges:
+                ids.append(id)
                 if edges[id][3] == None:
-                    open_edges.append('bottom')
+                    self.open_edges.append('bottom')
                 else:
-                    closed_edges.append('bottom')
+                    self.closed_edges.append('bottom')
             id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[distance, 0, 0]))
             if id in edges:
+                ids.append(id)
                 if edges[id][3] == None:
-                    open_edges.append('right')
+                    self.open_edges.append('right')
                 else:
-                    closed_edges.append('right')
+                    self.closed_edges.append('right')
             id = dungeon_generator.xy_location(dungeon_generator.add3(tile_pos,[-distance, 0, 0]))
             if id in edges:
+                ids.append(id)
                 if edges[id][3] == None:
-                    open_edges.append('left')
+                    self.open_edges.append('left')
                 else:
-                    closed_edges.append('left')
-            
+                    self.closed_edges.append('left')            
+
+  def pick_substitution(self, scene, edges, out_feature_name, category, name, connector_pos, connector_angle, tile_pos, incoming, distance):      
+            self.substitution_tile_name = False
+            self.substitution_tile_angle = False
             if category == '4way':
-                if len(open_edges) == 1:
-                    substitution_tile_name = 'corridor_3way_wide_01'
-                    if 'top' in open_edges:
-                        new_angle = 270
-                    elif 'right' in open_edges:
-                        new_angle = 180
-                    elif 'bottom' in open_edges:
-                        new_angle = 90
+                if len(self.open_edges) == 1:
+                    self.substitution_tile_name = 'corridor_3way_wide_01'
+                    if 'top' in self.open_edges:
+                        self.substitution_tile_angle = 270
+                    elif 'right' in self.open_edges:
+                        self.substitution_tile_angle = 180
+                    elif 'bottom' in self.open_edges:
+                        self.substitution_tile_angle = 90
                     else:
-                        new_angle = 0
-                elif len(open_edges) == 2:
-                    if 'top' in closed_edges and 'bottom' in closed_edges:
-                        substitution_tile_name = 'corridor_1way_wide_01'
-                        new_angle = 0
-                    elif 'left' in closed_edges and 'right' in closed_edges:
-                        substitution_tile_name = 'corridor_1way_wide_01'
-                        new_angle = 90
+                        self.substitution_tile_angle = 0
+                elif len(self.open_edges) == 2:
+                    if 'top' in self.closed_edges and 'bottom' in self.closed_edges:
+                        self.substitution_tile_name = 'corridor_1way_wide_01'
+                        self.substitution_tile_angle = 0
+                    elif 'left' in self.closed_edges and 'right' in self.closed_edges:
+                        self.substitution_tile_name = 'corridor_1way_wide_01'
+                        self.substitution_tile_angle = 90
                     else:
-                        if 'left' in closed_edges and 'top' in closed_edges:
-                            new_angle = 180
-                        if 'right' in closed_edges and 'bottom' in closed_edges:
-                            new_angle = 0
-                        if 'right' in closed_edges and 'top' in closed_edges:
-                            new_angle = 90
-                        if 'bottom' in closed_edges and 'left' in closed_edges:
-                            new_angle = 270
-                        substitution_tile_name = 'corridor_2way_wide_01'
-                elif len(open_edges) == 3:
-                    substitution_tile_name = 'corridor_1way_wide_01'
-                    if 'top' in closed_edges or 'bottom' in closed_edges:
-                        new_angle = 0
+                        if 'left' in self.closed_edges and 'top' in self.closed_edges:
+                            self.substitution_tile_angle = 180
+                        if 'right' in self.closed_edges and 'bottom' in self.closed_edges:
+                            self.substitution_tile_angle = 0
+                        if 'right' in self.closed_edges and 'top' in self.closed_edges:
+                            self.substitution_tile_angle = 90
+                        if 'bottom' in self.closed_edges and 'left' in self.closed_edges:
+                            self.substitution_tile_angle = 270
+                        self.substitution_tile_name = 'corridor_2way_wide_01'
+                elif len(self.open_edges) == 3:
+                    self.substitution_tile_name = 'corridor_1way_wide_01'
+                    if 'top' in self.closed_edges or 'bottom' in self.closed_edges:
+                        self.substitution_tile_angle = 0
                     else:
-                        new_angle = 90
+                        self.substitution_tile_angle = 90
             elif category == '3way':
-                if len(open_edges) == 1 and len(closed_edges) == 2:
-                    if 'top' in closed_edges and 'bottom' in closed_edges:
-                        substitution_tile_name = 'corridor_1way_wide_01'
-                        new_angle = 0
-                    elif 'left' in closed_edges and 'right' in closed_edges:
-                        substitution_tile_name = 'corridor_1way_wide_01'
-                        new_angle = 90
+                if len(self.open_edges) == 1 and len(self.closed_edges) == 2:
+                    if 'top' in self.closed_edges and 'bottom' in self.closed_edges:
+                        self.substitution_tile_name = 'corridor_1way_wide_01'
+                        self.substitution_tile_angle = 0
+                    elif 'left' in self.closed_edges and 'right' in self.closed_edges:
+                        self.substitution_tile_name = 'corridor_1way_wide_01'
+                        self.substitution_tile_angle = 90
                     else:
-                        substitution_tile_name = 'corridor_2way_wide_01'
-                        if 'top' in closed_edges and 'right' in closed_edges:
-                            new_angle = 90
-                        elif 'right' in closed_edges and 'bottom' in closed_edges:
-                            new_angle = 0
-                        elif 'bottom' in closed_edges and 'left' in closed_edges:
-                            new_angle = 270
+                        self.substitution_tile_name = 'corridor_2way_wide_01'
+                        if 'top' in self.closed_edges and 'right' in self.closed_edges:
+                            self.substitution_tile_angle = 90
+                        elif 'right' in self.closed_edges and 'bottom' in self.closed_edges:
+                            self.substitution_tile_angle = 0
+                        elif 'bottom' in self.closed_edges and 'left' in self.closed_edges:
+                            self.substitution_tile_angle = 270
                         else:
-                            new_angle = 180
-                elif len(closed_edges) == 1:
-                    if len(open_edges) == 2:
-                        substitution_tile_name = 'corridor_2way_wide_01'
-                        if 'top' not in open_edges and 'right' not in open_edges:
-                            new_angle = 90
-                        elif 'right' not in open_edges and 'bottom' not in open_edges:
-                            new_angle = 0
-                        elif 'bottom' not in open_edges and 'left' not in open_edges:
-                            new_angle = 270
+                            self.substitution_tile_angle = 180
+                elif len(self.closed_edges) == 1:
+                    if len(self.open_edges) == 2:
+                        self.substitution_tile_name = 'corridor_2way_wide_01'
+                        if 'top' not in self.open_edges and 'right' not in self.open_edges:
+                            self.substitution_tile_angle = 90
+                        elif 'right' not in self.open_edges and 'bottom' not in self.open_edges:
+                            self.substitution_tile_angle = 0
+                        elif 'bottom' not in self.open_edges and 'left' not in self.open_edges:
+                            self.substitution_tile_angle = 270
                         else:
-                            new_angle = 180
+                            self.substitution_tile_angle = 180
                     else:
-                        substitution_tile_name = 'corridor_1way_wide_01'
-                        if 'top' in closed_edges or 'bottom' in closed_edges:
-                            new_angle = 0
+                        self.substitution_tile_name = 'corridor_1way_wide_01'
+                        if 'top' in self.closed_edges or 'bottom' in self.closed_edges:
+                            self.substitution_tile_angle = 0
                         else:
-                            new_angle = 90
-
-            do = True
-
-            if substitution_tile_name and do:
-                fit_tiles_number = fit_tiles_number + 1
-                tile.SetNodeAttribute(self.tile_meshes[substitution_tile_name])
-                tile.LclRotation.Set(fbx.FbxDouble3(0, 0, new_angle))
-                tile.SetName(substitution_tile_name + "Substituted")                
-                print("tile substituted", closed_edges, substitution_tile_name,"->",name, tile_pos)
+                            self.substitution_tile_angle = 90
+            else:         
+                if (len(self.closed_edges) == 2):
+                    return False
+                if 'narrow' in name.split('_'):
+                    width = 'narrow'
+                elif 'wide' in name.split('_'):
+                    width = 'wide' 
+                else:
+                    return False  
+                corridor_name = 'corridor_1way_'+width+'_01'
+                stack = []
                 
-            elif not substitution_tile_name:
-                print("No substitution found for the tile: ",name,". Location: ", tile_pos)
-                unfit_tiles_number = unfit_tiles_number + 1
-    print("Substitution complete. ", fit_tiles_number, "/", (fit_tiles_number + unfit_tiles_number), "substitutions complete.")
-    if unstr != 0:
-        print("UNSTR = ",unstr)
-
-  def check_neighbours(self, scene, new_el_loc, node_name):
-    new_el_half_size = div3byconst(self.bb[node_name], 2)
-    root_node = scene.GetRootNode()
-    tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
-    #check overlapping for all nodes
-    for node in tiles:
-        old_el_loc = node.LclTranslation.Get()
-        old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
-        diff = sub3(new_el_loc, old_el_loc)
-        if (less3(abs3(diff), old_el_half_size + new_el_half_size)):
-            return False
-    return True    
-
-  def create_corridor(self, new_scene):
+                incoming = (width, corridor_name, dungeon_generator.sub3(tile_pos,connector_pos), [0, 0, connector_angle]) 
+                if self.try_tile(scene, stack, edges, connector_pos, connector_angle, incoming, id, True):
+                    self.room_connectors.append((stack.pop()))
+                self.free_space = False
+                self.continuation = 'corridor_wall_' + width
+                return True
+            if not(self.substitution_tile_name):
+                return False
+            return True             
+        
+  def create_corridor(self, new_scene, corridor_size, pos, tile_pos, angle, outgoing_connection, incoming_connection):
     # clone the tile meshes and name them after their original nodes.
     tile_meshes = self.tile_meshes = {}
     tile_weights = {}
@@ -244,12 +281,9 @@ class corridor_generator:
       tile_categories[name] = category
 
     edges = {}
-    pos = (0, 0, 0)
-    angle = 0
-    corridor_size = 200
-
+    self.room_connectors = []
     # create an unsatisfied edge
-    stack = [(pos, pos, angle, 'wide', False)]
+    stack = [(pos, tile_pos, angle, outgoing_connection, incoming_connection)]
     open_edges_deleted_from_stack = []
     num_tiles = 0
     random.seed(1)
@@ -261,6 +295,7 @@ class corridor_generator:
 
     # this loop processes one edge from the todo list.
     while len(stack) and num_tiles < corridor_size:
+
       r = random.randrange(len(stack))
       edge_pos, tile_pos, angle, out_feature_name, in_feature_name = stack.pop()#r)
       
@@ -308,7 +343,7 @@ class corridor_generator:
         for tile_name in tile_weights:
             tile_weights[tile_name] += 1
 
-        if self.try_tile(new_scene, stack, edges, edge_pos, angle, picked_tile, num_tiles):
+        if self.try_tile(new_scene, stack, edges, edge_pos, angle, picked_tile, num_tiles, True):
           element_placed = True        
           break
 
@@ -318,4 +353,39 @@ class corridor_generator:
       num_tiles += 1
     while len(open_edges_deleted_from_stack) > 0:
         stack.append(open_edges_deleted_from_stack.pop())
-    self.close_ends(new_scene, stack, 4, tile_categories, 0, edges)
+    self.close_ends(new_scene, stack, 4, tile_categories, edges, )
+        
+    stack = []
+    for connector in self.room_connectors:
+        connector_pos, tile_pos, tile_angle, inc, outg = connector
+        wide_tiles = self.door_incoming[inc]
+        if 'room' in wide_tiles[0][1]:
+            incoming = self.door_incoming[inc][0]
+        else:
+            incoming = self.door_incoming[inc][1]        
+        self.try_tile(new_scene, stack, edges, connector_pos, tile_angle, incoming, 0, False)
+    rooms_stack = []
+    for connector in stack:
+        connector_pos, tile_pos, tile_angle, inc, outg = connector
+        incoming = self.rooms_incoming[inc][0]      
+        self.try_tile(new_scene, rooms_stack, edges, connector_pos, tile_angle, incoming, 0, True)
+
+    for connector in rooms_stack:
+        connector_pos, tile_pos, tile_angle, inc, outg = connector   
+        wall_name = 'room_wall_'+inc          
+        wall = self.walls[wall_name]
+        if wall.GetChildCount() != 1:
+            print("Wall has incorrect children number:", wall)
+        else:
+            child = wall.GetChild(0)
+            wall_connector_loc = child.LclTranslation.Get()
+            wall_pos = dungeon_generator.sub3(connector_pos, [0, 0, wall_connector_loc[2]])
+                                                          
+            new_node = fbx.FbxNode.Create(new_scene, wall_name)
+            new_node.SetNodeAttribute(self.tile_meshes[wall_name])
+            new_node.LclTranslation.Set(fbx.FbxDouble3(wall_pos[0], wall_pos[1], wall_pos[2]))
+            new_node.LclRotation.Set(fbx.FbxDouble3(0, 0, tile_angle))
+            root = new_scene.GetRootNode()
+            root.AddChild(new_node)  
+            print("Wall added. Tile name = ", name, " Tile pos =", dungeon_generator.round3(tile_pos),
+                " Wall pos = ",dungeon_generator.round3(connector_pos)," Angle =", tile_angle)

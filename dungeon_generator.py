@@ -2,7 +2,6 @@
 import re
 import math
 import random
-import rooms_generator_module
 import corridor_generator_module
 
 # if (when) this doesn't work, copy 64 bit Python 3.3 fbx.pyd and fbxsip.pyd from the Autodesk FBX SDK
@@ -83,26 +82,20 @@ class dungeon_generator:
     # child nodes matching this pattern are feature markup
     connectors_regex_pattern = re.compile('(\<|\>)([^.]+)(\..*)?')
 
-    incoming = self.incoming = {}
-    outgoing = self.outgoing = {}
-    tiles = self.tiles = {}
-    self.room = rooms_generator_module.rooms_generator()
     self.corridor = corridor_generator_module.corridor_generator()
-
-    self.room.incoming = {}
     self.corridor.incoming = {}
-
-    self.room.outgoing = {}
     self.corridor.outgoing = {}
-
-    self.room.bb = {}
     self.corridor.bb = {}
-
-    self.room.tiles = {}
     self.corridor.tiles = {}
-
-    self.doorframes = {}
+    self.corridor.walls = {}
+    #self.corridor.doorways_connectors = {incoming, outgoing}
     self.unused = {}
+    self.corridor.transitions = {}
+    self.corridor.door_incoming = {}
+    self.corridor.door_outgoing = {}
+    self.corridor.room_tile_name = 'room_1way_extrawide_01'
+    self.corridor.rooms_incoming = {}
+    self.corridor.rooms_outgoing = {}
 
     # find the tiles in the file with at least one child (the connectors)
     for node in top_level:
@@ -114,26 +107,21 @@ class dungeon_generator:
         #identify tile type
 
         tile_name_parts = tile_name.split('_')
-        is_room_part = False
         is_corridor_part = False
-        is_doorframe = False
+        is_doorway = False
 
-        
-        for name in tile_name_parts:
-            if name == "room":
-                is_room_part = True
-            if name == "corridor":
-                is_corridor_part = True
-            if name == "doorframe":
-                is_doorframe = True
+        if 'doorway' in tile_name_parts:
+            is_doorway = True
+        elif 'wall' in tile_name_parts:                    
+                self.corridor.walls[tile_name] = node
+                self.corridor.tiles[tile_name] = node
+        elif 'corridor' in tile_name_parts:
+            is_corridor_part = True
+
 
         #add tile to the appropriate tile dictionary
-        if is_room_part:
-            self.room.tiles[tile_name] = node
-        elif is_corridor_part:
-            self.corridor.tiles[tile_name] = node
-        elif is_doorframe:
-            self.doorframes.tiles[tile_name] = node        
+        if 'room' in tile_name or 'corridor' in tile_name or 'doorway' in tile_name:
+            self.corridor.tiles[tile_name] = node     
 
         #read connectors of the tile
         connectors = [node.GetChild(i) for i in range(node.GetChildCount())]        
@@ -165,23 +153,19 @@ class dungeon_generator:
             if direction == '>':
               # outgoing tile indexed by tile_name
               idx = tile_name
-              if is_room_part:
-                dict = self.room.outgoing
-              elif is_corridor_part:
+              if is_corridor_part or is_doorway or tile_name == self.corridor.room_tile_name:
                 dict = self.corridor.outgoing
-              elif is_doorframe:
-                dict = self.doorframes
               else:
                 dict = self.unused
             else:
               # incoming tile indexed by feature name
               idx = feature_name
-              if is_room_part:
-                dict = self.room.incoming
-              elif is_corridor_part:
+              if is_corridor_part:
                 dict = self.corridor.incoming
-              elif is_doorframe:
-                dict = self.doorframes
+              elif is_doorway:
+                dict = self.corridor.door_incoming
+              elif tile_name == self.corridor.room_tile_name:
+                dict = self.corridor.rooms_incoming
               else:
                 dict = self.unused
             if not idx in dict:
@@ -189,18 +173,19 @@ class dungeon_generator:
             dict[idx].append(result)
 
         if is_corridor_part:
-            max_dim = max(max_x,max_y,max_z)
+            max_dim = max(max_x, max_y, max_z)
 
             if round(max_x) == 0:
-                max_x = max_dim
+                if 'stairs' in tile_name:
+                    max_x = 8
+                else:
+                    max_x = max_dim
             if round(max_y) == 0:
                 max_y = max_dim
             if round(max_z) == 0:
                 max_z = max_dim
             self.corridor.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
         
-        if is_room_part:
-            max_dim = max(max_x,max_y,max_z)
 
             if round(max_x) == 0:
                 max_x = max_dim
@@ -208,17 +193,17 @@ class dungeon_generator:
                 max_y = max_dim
             if round(max_z) == 0:
                 max_z = max_dim
-            self.room.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
+            if tile_name == 'room_1way_extrawide_01':
+                self.corridor.bb[tile_name] = (round(2*max_x),round(2*max_y),round(2*max_z))
+                self.corridor.tiles[tile_name] = node
+        elif is_doorway:
+            self.corridor.bb[tile_name] = [16, 1, 10]
             
     # at this point incoming and outgoing index connectors
     # tiles indexes the tiles by name.
-    print("Rooms.incoming:", self.room.incoming)
-    print("Rooms.outgoing:", self.room.outgoing)
 
     print("Corridors.incoming:", self.corridor.incoming)
     print("Corridors.outgoing:", self.corridor.outgoing)
-
-    print("Doorframes:", self.doorframes)
 
   def get_format(self, name):
     reg = self.sdk_manager.GetIOPluginRegistry()
@@ -260,28 +245,21 @@ class dungeon_generator:
     tiles = [root_node.GetChild(i) for i in range(root_node.GetChildCount())]
     #check overlapping for all nodes
     for node in tiles:
-        old_el_loc = node.LclTranslation.Get()
-        old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
-        diff = round3(abs3(sub3(new_el_loc, old_el_loc)))
-        half_size = round3(add3(old_el_half_size, new_el_half_size))
-        if less3(diff, half_size):
-            return False
+        if node.GetName() in self.bb:        
+            old_el_loc = node.LclTranslation.Get()
+            old_el_half_size = div3byconst(self.bb[node.GetName()], 2)
+            diff = round3(abs3(sub3(new_el_loc, old_el_loc)))#-32 44 4
+            half_size = round3(add3(old_el_half_size, new_el_half_size))
+            if less3(diff, half_size):
+                return False
     return True
 
  
 
   def create_dungeon(self, new_scene):
-      
-      self.corridor.create_corridor(new_scene)
-      #self.room.create_room(new_scene)
-
-
-
-      ### Below this comment is old Andy's code
-      ### For Jack -> Instead, here should be combination of module creation (corridors & rooms)
-      ### For Luke -> You can test your code here, by changing line 255 to the call of your function
-
-
-
-
-    
+      self.corridor.endings = []
+      pos = (0, 0, 0)
+      angle = 0
+      size = 100
+      self.corridor.bb[self.corridor.room_tile_name] = [16, 16, 16]
+      self.corridor.create_corridor(new_scene, size, pos, pos, angle, 'wide', False)
